@@ -32,7 +32,7 @@ These are frames from automated runs of local preview builds (1280x720). They sh
 | ![Combat in Elwynn](docs/screenshots/01-combat-elwynn-mage.jpg) | ![Boss Old Murk-Eye, Westfall content](docs/screenshots/02-boss-old-murk-eye.jpg) |
 | ![Goblin female in the Armory](docs/screenshots/03-goblin-female-armory.jpg) | ![Goblin male in the Armory](docs/screenshots/04-goblin-male-armory.jpg) |
 | ![Orc female with HD body and weapon](docs/screenshots/05-orc-female-armory-hd.jpg) | ![Sharpen pass compare (before / after)](docs/screenshots/06-sharpen-compare.jpg) |
-| ![Foe Reaper 4000 boss bar and announcement, Westfall](docs/screenshots/07-boss-foe-reaper-announce.jpg) | |
+| ![Foe Reaper 4000 boss bar and announcement, Westfall](docs/screenshots/07-boss-foe-reaper-announce.jpg) | ![Elwynn Forest with the v3.1 renderer upgrade preview](docs/screenshots/08-elwynn-renderer-v3-1.jpg) |
 
 ## Requirements
 
