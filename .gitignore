@@ -16,3 +16,6 @@ previews/
 inputs/
 locks/
 mod-backups/
+tools/casc-offline/build-x64/
+tools/casc-offline/build-logs/
+!tools/casc-offline/source/listfile/listfile-archive.zip

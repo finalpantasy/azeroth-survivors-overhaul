@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "upstream": "https://github.com/ladislav-zezula/CascLib",
+  "release": "3.0",
+  "commit": "4971d363e665551ac4142f541e5f2d71f1cda653",
+  "archive_sha256": "527920b8a48febb7da8fa72beee187cbd0a65cd377400b3160298d37fed34413",
+  "source_root": "mod-tools/casc-offline/source",
+  "source_file_count": 124,
+  "source_files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "79c0faab30dc986fe05f2f0e11ecbcdc1954a3ec971d81e193d8e834572ce98c"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "11bfb675fe6a60a005006082a9435e6275a2d88f14a6cae7b43c51436c201170"
+    },
+    {
+      "path": ".vscode/c_cpp_properties.json",
+      "sha256": "ec18542a6192b71952a7a85fd3d66a9e2851cd0a0c933dce04114d4457735ce1"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "862d612ae665fa0699500fc2993bf862b869aacf78f8f736b25fd517768a55c7"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "sha256": "95fe58abf8fbc9a395e6f071e07a810354c3442d02f57f50dcc8173e34ded209"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "sha256": "4ceec42965a9cfb178eb1b104c5aa5f6b48d1a0b305e62dc3d1626e093c639e3"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "f2738382d6f3961f44bd8814b96bbdf42db143ee8c1c11f19b25d4b4615dfdb0"
+    },
+    {
+      "path": "CascLib.sln",
+      "sha256": "bedb44a44e63b9d06324f2285518359230ee363dd11a94cb3c006daa091eeb6c"
+    },
+    {
+      "path": "CascLib.vcxproj",
+      "sha256": "3f38e09c48c01d4dbe99da01bd81b0aefcea4a036230ced61eab90d52654d8ce"
+    },
+    {
+      "path": "CascLib.vcxproj.filters",
+      "sha256": "ed4b6066eb821ee2414dcb469168ca9dc2c0deb9faaf98bc1904206b69487277"
+    },
+    {
+      "path": "CascLib_dll.vcxproj",
+      "sha256": "e4a649a4f9570e1742f801f7c67fcab80498413cd1ca76fef439a5b3de9228bc"
+    },
+    {
+      "path": "CascLib_dll.vcxproj.filters",
+      "sha256": "b7caf70723191e738d8b122cadbc07196e85b2f8efa128fe2586516581d69596"
+    },
+    {
+      "path": "CascLib_test.vcxproj",
+      "sha256": "ea7d433154dc221186b4fc990dd78fb69da8daf844d4b9e1215d00c5dc8e8bcd"
+    },
+    {
+      "path": "CascLib_test.vcxproj.filters",
+      "sha256": "32f6d9fff61f1fa6fe24b7758ad6363269d875bc77a9d0121c7c770fca06a2ad"
+    },
+    {
+      "path": "CascLib_vs08.sln",
+      "sha256": "2e55546ffadfe76a31fcd2c7e641124af14762516118e27e7f276748c65923b1"
+    },
+    {
+      "path": "CascLib_vs08.vcproj",
+      "sha256": "0c956efc570b1ca3a2939190784f8f6e58f60b0388241afbb9a72182c797a522"
+    },
+    {
+      "path": "CascLib_vs08_dll.vcproj",
+      "sha256": "202d7bf297dd261d4b66b411df477535d890cd5d8446305aed04ebf702e271c5"
+    },
+    {
+      "path": "CascLib_vs08_test.vcproj",
+      "sha256": "9680ca364db7f64175833a04c7114897761b97d5563522049e4fbe37275e91ac"
+    },
+    {
+      "path": "Config.cmake.in",
+      "sha256": "c7394dec30c0b73b946f7706c4a5006c4f3d42743e31bb51554a9bbedae3cbc9"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "2bcedca5b74c03ddd6492990bc18261cb749c40e85c89b4e54fc3f98cdb6b6bf"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b0e6af7772a57a9561342da91fbef60dfc3f74668fc0ec8c88c76a3ba88865d8"
+    },
+    {
+      "path": "debian/README",
+      "sha256": "ed9189b31c4fa78f98c61d53fec857db59853a226edaca0d97f5894593e498d9"
+    },
+    {
+      "path": "debian/changelog",
+      "sha256": "1767fab22778d34640f7b4699fc3a48529c7c4aa6ce4c0b786be9af6d9edd406"
+    },
+    {
+      "path": "debian/control",
+      "sha256": "a4a274e8f40fb2a36ba1bf50363cc3eaa74a862dac1e30b57755c0460c57be0f"
+    },
+    {
+      "path": "debian/copyright",
+      "sha256": "26d534a5f06a9e24c4dd3d1c52e266de0465a12a356de620f296e637bace7361"
+    },
+    {
+      "path": "debian/libcasc-dev.dirs",
+      "sha256": "6be516da01978b9a3466ac594b8ca436ca14374f6f30d9bcb24136814274ad8e"
+    },
+    {
+      "path": "debian/libcasc-dev.install",
+      "sha256": "d753ada413b476233e9bda016a987dbc52fd8f7571e0c6e2e00dcc79c6f1d0ec"
+    },
+    {
+      "path": "debian/libcasc-dev.substvars",
+      "sha256": "59779df0125b8bc0a82628f5d15c1adcc4436d950838a0c4a90998ef42881a4e"
+    },
+    {
+      "path": "debian/libcasc-docs.docs",
+      "sha256": "82111c75e038c9fa5a5347164c86f13532e7f0da34c23c6e77080860b6f5e763"
+    },
+    {
+      "path": "debian/libcasc1.dirs",
+      "sha256": "0bb13c291b79916c16ba0cb8da8d0daa0d0034da2c05616e71c6d6a7660bbdb4"
+    },
+    {
+      "path": "debian/libcasc1.install",
+      "sha256": "0ff7b540b3e53d1d4d90544bc953d733e180b55ff772fa85ec29e497196454ef"
+    },
+    {
+      "path": "debian/libcasc1.substvars",
+      "sha256": "73a6729d2f5c92a01d4b78ffeea86cc74953496c8eef5cc93175cb1c9a1fc2cc"
+    },
+    {
+      "path": "debian/rules",
+      "sha256": "269d6b99da1116502fd125d35ffd307a7e175496cc4fd8d333744f760b7ae9e5"
+    },
+    {
+      "path": "listfile/listfile-archive.zip",
+      "sha256": "fad77619d2923ed7d4743b658f4ebb00945667c75a91b12b4555f289db2c9cbe"
+    },
+    {
+      "path": "listfile/update-listfiles.py",
+      "sha256": "350efc55be5df54df0eb3fdd0e2e9e5dbe5050bc2b7c76fe3e6a04c5e4f6d572"
+    },
+    {
+      "path": "make-msvc.bat",
+      "sha256": "2577b8235d4eb927bd80d506facbce996ea2486bcca3f01a5e267ac7e2c374b1"
+    },
+    {
+      "path": "make.bat",
+      "sha256": "ccf785b303bf5bf9ae620e1be4378fde6699b9415db11fbec247e22fde8c1e91"
+    },
+    {
+      "path": "sources",
+      "sha256": "4fa6857e549e1b99a74a99f333c9b20f1809dadf135e0a9bfe9dd974c36b6d23"
+    },
+    {
+      "path": "sources-c.c",
+      "sha256": "1c2239fe2aebcfeb997d329489a36328a7ed6e5293a65a80f4c0310a391e7963"
+    },
+    {
+      "path": "sources-cpp.cpp",
+      "sha256": "f625c1bf2aa1bbab01088f0f5df9093d843f11ba4e90c2bfed1c650ffa6e0051"
+    },
+    {
+      "path": "src/CascCommon.h",
+      "sha256": "e02cede5f58ad459fd7791e70fa1da93529cd8c707e7816c95eb06ecaa8a4f49"
+    },
+    {
+      "path": "src/CascDecompress.cpp",
+      "sha256": "ddcdf77a3d9a052fae185b687f32b3ac8b9865c55e5de6a75e86de60c9a4a65f"
+    },
+    {
+      "path": "src/CascDecrypt.cpp",
+      "sha256": "e7c319e928c9ee5584ede3671d449600c6283ec4aa113582a172a827f52fc89a"
+    },
+    {
+      "path": "src/CascDumpData.cpp",
+      "sha256": "e5392a403ddb045fbb07bcf8c05b73c84bda32a66ceb06769d05c71ee2919da8"
+    },
+    {
+      "path": "src/CascFiles.cpp",
+      "sha256": "d6c993f835cc3289169fa4fbd524b6117ce5c01c4f417ae74dc8b31e15023cb7"
+    },
+    {
+      "path": "src/CascFindFile.cpp",
+      "sha256": "9fad4370a344f82c6f15ee34affcac1bc29a44b49989d7a5cddf70d0b2bc86a5"
+    },
+    {
+      "path": "src/CascIndexFiles.cpp",
+      "sha256": "cf6381a6ff99680823c561a828bd4ad78aa1ca348d6e4c958137c5cad426f3c3"
+    },
+    {
+      "path": "src/CascLib.h",
+      "sha256": "da978871e1cbb84bc925624f561dd973bd84537df94aab1454e3f335608a2583"
+    },
+    {
+      "path": "src/CascOpenFile.cpp",
+      "sha256": "de4f3eb10e95bce10f4b8bbaea2a6efd401fc9a8f7109bcd9b0c0606772ec768"
+    },
+    {
+      "path": "src/CascOpenStorage.cpp",
+      "sha256": "1ac2053685ec53332335ba35eb228c1ff9edd5e9e93e2eb0ad94bd78b6094c86"
+    },
+    {
+      "path": "src/CascPort.h",
+      "sha256": "96eeda4e5d9b71f535fe6d8cb0791ff175d34db302da0cc14c882ac03deef0c5"
+    },
+    {
+      "path": "src/CascReadFile.cpp",
+      "sha256": "e6bd8e84f578555d16ef6978f660ac35b901f89b65761b97b813543cb0a3e20e"
+    },
+    {
+      "path": "src/CascRootFile_Diablo3.cpp",
+      "sha256": "50adf5e811171aea5e19545e678496ca41d368bfd5a441e7f7e1131f5e2998f4"
+    },
+    {
+      "path": "src/CascRootFile_Install.cpp",
+      "sha256": "f0a8f8907b6eeb5b8f7f140c08d20cda55668844a93842486b2ba1812f5b1b38"
+    },
+    {
+      "path": "src/CascRootFile_MNDX.cpp",
+      "sha256": "05b7371875547b9b208b7ec4ec737f01c522b4af9d3d0751f2c4f91f83d85cd2"
+    },
+    {
+      "path": "src/CascRootFile_OW.cpp",
+      "sha256": "de5cc33c9d032a3d4dfc73fa119632f2ade758853089da0177819860b50114ca"
+    },
+    {
+      "path": "src/CascRootFile_TVFS.cpp",
+      "sha256": "1d06ce92f28f67c5bb3d41774eb4e49acd7702f2dfc5dd9654a4a9478d218829"
+    },
+    {
+      "path": "src/CascRootFile_Text.cpp",
+      "sha256": "8b6c748ac52ef431a78992778562ced28c880ab0d1fbba1218d3643d12416481"
+    },
+    {
+      "path": "src/CascRootFile_WoW.cpp",
+      "sha256": "f41ae16d0d283360d49e04e7c06b5b1470c35ca99aa556227dbb0c255c15c669"
+    },
+    {
+      "path": "src/CascStructs.h",
+      "sha256": "1ad42070671a9382750c918e30cd4b9ee172ef51f7c581b518cfcb85724852bf"
+    },
+    {
+      "path": "src/DllMain.c",
+      "sha256": "2968546ada33e4d06d146105a227b0fcdcd2737b983e9669a33469a633dd1b96"
+    },
+    {
+      "path": "src/DllMain.def",
+      "sha256": "1185296399bccc8c1957a9d20d0af408278764b276eed51ce0559b672ef1b7a3"
+    },
+    {
+      "path": "src/DllMain.rc",
+      "sha256": "f5cdaa59f234e45ec81d305f8d3f8e6b792042f5e527caa043ae7582204be2f3"
+    },
+    {
+      "path": "src/common/Array.h",
+      "sha256": "d96ed91d13e10ad07bb20855579cdba9466f0d4937ba22edb8ab2e8e33e4dfe3"
+    },
+    {
+      "path": "src/common/ArraySparse.h",
+      "sha256": "490ff7761e9ebd75c4180a507d30f892164e585e9629d3b266cac7e6fb4616e3"
+    },
+    {
+      "path": "src/common/Common.cpp",
+      "sha256": "0e5c8af2e66e5937cdfbbacff4d5694624929c366eefc9c28dea97f5ec0f1377"
+    },
+    {
+      "path": "src/common/Common.h",
+      "sha256": "67a550e787c7afb3faf44e3846e6f0860f729f6eae099842f895c2af47962aa0"
+    },
+    {
+      "path": "src/common/Csv.cpp",
+      "sha256": "9ff1661decbacbe5cdb04fc3d29da0f2e04eda8c8674826d926d3010e5a0564b"
+    },
+    {
+      "path": "src/common/Csv.h",
+      "sha256": "fede514311a829d79d4fec8034cd2d0b8144483f973661d5ad6562ff48b5266a"
+    },
+    {
+      "path": "src/common/Directory.cpp",
+      "sha256": "a00f7d23cc0ba21b56ce99ea26295de1be03a24c7b80502c07de48659b75ae99"
+    },
+    {
+      "path": "src/common/Directory.h",
+      "sha256": "cbb36e2a46ab370ddd83b8b231b308f202bc6239bc377d05e02383d280441b5a"
+    },
+    {
+      "path": "src/common/FileStream.cpp",
+      "sha256": "20e6ea4b9b5ecc98dddee98878d73bea77684979a4750bd320ad5e631d01b970"
+    },
+    {
+      "path": "src/common/FileStream.h",
+      "sha256": "0bc5ef156e7198d4f92e4b955e2ae5a880ba624e3fb395b085a0e9ce68dc2634"
+    },
+    {
+      "path": "src/common/FileTree.cpp",
+      "sha256": "34d85db6c4e122f1ec6253427b4046c049c4633a96be7949e9a3ddbeb1a40b4a"
+    },
+    {
+      "path": "src/common/FileTree.h",
+      "sha256": "5024c96141ab9405fc0fc2bd8476a6b7fad431168aa1b729e40aa3b078777ecd"
+    },
+    {
+      "path": "src/common/IndexMap.h",
+      "sha256": "1af93a202a7826e117757214ad917ae1eb45c312b28006c251b4e9adc2ca905d"
+    },
+    {
+      "path": "src/common/ListFile.cpp",
+      "sha256": "a50d663f1d76faffc39ed7bf8370ce3e387973729a3985af3417549eb4a17864"
+    },
+    {
+      "path": "src/common/ListFile.h",
+      "sha256": "93646b180b3156b1e4b23a397587273505c598606e2ce5237349789d5f557fe2"
+    },
+    {
+      "path": "src/common/Map.h",
+      "sha256": "b957006edef6f7c1b555b5278df96f756260e106f2bdbdc6894c220949904c00"
+    },
+    {
+      "path": "src/common/Mime.cpp",
+      "sha256": "67aa063869da8d5bb2c46ef50064f1720e4d9773373f526f399d2ad9e3f2542f"
+    },
+    {
+      "path": "src/common/Mime.h",
+      "sha256": "ac7768ddddb9796ffa246c5c7aa3cf31d949bc5107e020feceb4b8e97282c950"
+    },
+    {
+      "path": "src/common/Path.h",
+      "sha256": "ad127357337988760a0bd0a9e37b789fb8d837676ba7a46e017459842686558e"
+    },
+    {
+      "path": "src/common/RootHandler.cpp",
+      "sha256": "a173a951599e61a0f1a7f938d17755777443542ea8af4b5027e9eddf8dcddca9"
+    },
+    {
+      "path": "src/common/RootHandler.h",
+      "sha256": "e64e0d6b442daffca49217f7aa50d095c14cc22d8b970ff0a486101f39ec4b1e"
+    },
+    {
+      "path": "src/common/Sockets.cpp",
+      "sha256": "5bcd783f3e60a0b7e491e4cd04f351d81ad2fc252a84f02ddccad71caf5f6c73"
+    },
+    {
+      "path": "src/common/Sockets.h",
+      "sha256": "dbc0dc4cf43dd62bedfc2877a49032a4576deffc5fd0a7e57d086b145aea122f"
+    },
+    {
+      "path": "src/hashes/md5.cpp",
+      "sha256": "ea7433a1b88bd5c9e5445fb95a4f5261a94f57f937306de502c7fd5d306f2fd5"
+    },
+    {
+      "path": "src/hashes/md5.h",
+      "sha256": "15afb7a08dc699f6556e52f696b2781a3c8b0c1750f7dea8e0aefb9040538abc"
+    },
+    {
+      "path": "src/hashes/sha1.cpp",
+      "sha256": "f4dd10d53dba28d3db05faa6f4b37be4d45e6fd9bfb1e87bad8655dee827d7ea"
+    },
+    {
+      "path": "src/hashes/sha1.h",
+      "sha256": "9da07a21cb5a3ee7a9311f548d5d18744f1f2324463a88aab9880c160803ba8a"
+    },
+    {
+      "path": "src/jenkins/lookup.h",
+      "sha256": "22d971e6926e0705e346a2bd80f18f63336133e6605e0a09bb47bd77db6e7b75"
+    },
+    {
+      "path": "src/jenkins/lookup3.c",
+      "sha256": "b5a57ba3b6475edf9930792412d9c4936aebc3f834bedfbd2f87eb98d378c508"
+    },
+    {
+      "path": "src/overwatch/aes.cpp",
+      "sha256": "2d33ad3bfbb136d1a091c819fbd1c71352d5d63b0e57a2e8189e23eb3211ece9"
+    },
+    {
+      "path": "src/overwatch/aes.h",
+      "sha256": "a7fdb3100e8de7ea76459b7e5defea0c5f28169fcc06162b9c025a5e44542a85"
+    },
+    {
+      "path": "src/overwatch/aes_local.h",
+      "sha256": "86f52383f06978a2c149b264f156f33162524271fdfb0a1cfbd2f394033f19fa"
+    },
+    {
+      "path": "src/overwatch/apm.cpp",
+      "sha256": "eba3d61b6ccd1c479cde17abc9fb6d558b6fa3785b0f0d42792f3c55bf28040a"
+    },
+    {
+      "path": "src/overwatch/cmf-key.cpp",
+      "sha256": "386f8fbbe07bec2ec623e7ce6a7da1e36ebd12afca4d533eede6f2a642e0fdb2"
+    },
+    {
+      "path": "src/overwatch/cmf-update.py",
+      "sha256": "01d0b33c4d9103543a7eb94b4805aa1aa25af6b0283621b5de984fb6e3054287"
+    },
+    {
+      "path": "src/overwatch/cmf.cpp",
+      "sha256": "ce314b11f64e59615dc4190bd228d76d1df56c8c43ded5a76ce5601035826fcc"
+    },
+    {
+      "path": "src/overwatch/overwatch.h",
+      "sha256": "17be6c56b27d2aac73b50cf4ee3d9fafc81649171e112076b15c07df85abd3df"
+    },
+    {
+      "path": "src/resource.h",
+      "sha256": "bf9f76a6a8882a2c34363ae631e384cde6a6931d7ae8f5068469383719736d15"
+    },
+    {
+      "path": "src/zlib/adler32.c",
+      "sha256": "d7f1b6e44fee20ab41cef1d650776a039a2348935eb96bcbd294a4096139be3a"
+    },
+    {
+      "path": "src/zlib/crc32.c",
+      "sha256": "a04af273e83ecc351bf3794974ab2098d8d960df4044b7b44734c41443ee26d0"
+    },
+    {
+      "path": "src/zlib/crc32.h",
+      "sha256": "407af59d0abfea84a6507c603eb29809411797f98249614fe76a661def783ce1"
+    },
+    {
+      "path": "src/zlib/deflate.c",
+      "sha256": "11fd6b0328b65c4ad4b5c204d892a97a9083628a7e77dc47836c8e0c799f8da0"
+    },
+    {
+      "path": "src/zlib/deflate.h",
+      "sha256": "0ca7fb0cf1dd63001c6e9e4ff93c8dbff2fe521199be51a4dda38a11b44919f6"
+    },
+    {
+      "path": "src/zlib/gzguts.h",
+      "sha256": "1ef4741cf10441feeca5c8dde2b6c754f0cbd96fcae697d54a604757289a5e9b"
+    },
+    {
+      "path": "src/zlib/inffast.c",
+      "sha256": "4d496ab2a3d29df5fadc3dbff6067e039806aaceae6cfcd09ea77d46c2b848fd"
+    },
+    {
+      "path": "src/zlib/inffast.h",
+      "sha256": "7d8c1c873ce9bc346ad6005bb9d75cce5c6352aaf7395385be216a9452a34908"
+    },
+    {
+      "path": "src/zlib/inffixed.h",
+      "sha256": "237ba710f090e432b62ebf963bee8b302867e9691406b2d3f8ee89ee7bfef9b0"
+    },
+    {
+      "path": "src/zlib/inflate.c",
+      "sha256": "8b6c599c3563c14c447c47db0d7dc9a16e8c246a078ec95a169ddcebaaebd811"
+    },
+    {
+      "path": "src/zlib/inflate.h",
+      "sha256": "587373944095b6733c152b861da58e6e416f2c4788d1bb93a77a07c937d58cb7"
+    },
+    {
+      "path": "src/zlib/inftrees.c",
+      "sha256": "1960ca67384376f65b6ce8c08fdb501f8eb33923e11ef5f61a855708c6cb0a8a"
+    },
+    {
+      "path": "src/zlib/inftrees.h",
+      "sha256": "dc982955c31543d5dfb94b1a4e4b3d0b1a6e9449bdad21a69b58c9142a8e88ae"
+    },
+    {
+      "path": "src/zlib/trees.c",
+      "sha256": "f2a5f949ea70dde7c23a54c793aeed630a03df4bb72417cd3aa008000c44699b"
+    },
+    {
+      "path": "src/zlib/trees.h",
+      "sha256": "bb0a9d3ca88ee00c81adb7c636e73b97085f6ef1b52d6d58edbe2b6dc3adeb4d"
+    },
+    {
+      "path": "src/zlib/zconf.h",
+      "sha256": "9c0087f31cd45fe4bfa0ca79b51df2c69d67c44f2fbb2223d7cf9ab8d971c360"
+    },
+    {
+      "path": "src/zlib/zlib.h",
+      "sha256": "4ddc82b4af931ab55f44d977bde81bfbc4151b5dcdccc03142831a301b5ec3c8"
+    },
+    {
+      "path": "src/zlib/zutil.c",
+      "sha256": "f7fdc9ef326a2683eb33c794face54e83c751ec17f3d1ba581847a62af36ddcd"
+    },
+    {
+      "path": "src/zlib/zutil.h",
+      "sha256": "9a63f6690fac1620aa3cecee5752af618806da438a256b4a047fbcd289cac159"
+    },
+    {
+      "path": "test/CascTest.cpp",
+      "sha256": "81a682f1ffb6d666746aeb2f2cdf00ccb60dc29a0e2c1cdd7b5cb7fb338a2216"
+    },
+    {
+      "path": "test/TLogHelper.cpp",
+      "sha256": "d61bb4af4092f4cb1b1f526ef7b8f83eef49783f51ff435a00d0ccfa108868a6"
+    },
+    {
+      "path": "test/casclib-test-001.txt",
+      "sha256": "71b81567c885bb641f54cea2db501f7367242611abffe9fbff3ec1e4b48dfc88"
+    },
+    {
+      "path": "wiki2cppkeys.py",
+      "sha256": "8096aaf9e0ef8536e2e5ce1ddaf008d6e14cbb8496cbc3c68f825cd87cd73dc2"
+    }
+  ],
+  "source_changes": [
+    {
+      "path": "src/CascFiles.cpp",
+      "original_sha256": "35a1cdc2fff9fe72e09f585e6221465e277b3541ca7002c7d235bfabe44fc222",
+      "derived_sha256": "d6c993f835cc3289169fa4fbd524b6117ce5c01c4f417ae74dc8b31e15023cb7"
+    },
+    {
+      "path": "src/CascOpenStorage.cpp",
+      "original_sha256": "9f02c8316bd2d0f18769952dc8673dfc9cf4758461d8374bf537550a1e51af0a",
+      "derived_sha256": "1ac2053685ec53332335ba35eb228c1ff9edd5e9e93e2eb0ad94bd78b6094c86"
+    }
+  ],
+  "patch": "analysis/casc-reader-runtime/source-hardening.patch",
+  "cmake_options": {
+    "CASC_BUILD_SHARED_LIB": "ON",
+    "CASC_BUILD_STATIC_LIB": "OFF",
+    "CASC_BUILD_TESTS": "OFF",
+    "CASC_UNICODE": "ON",
+    "CMAKE_DISABLE_FIND_PACKAGE_ZLIB": "ON"
+  },
+  "note": "listfile/listfile.txt (76 MB, extracted from listfile-archive.zip) is not shipped in this repository."
+}
