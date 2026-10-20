@@ -33,6 +33,9 @@ These are frames from automated runs of local preview builds (1280x720). They sh
 | ![Goblin female in the Armory](docs/screenshots/03-goblin-female-armory.jpg) | ![Goblin male in the Armory](docs/screenshots/04-goblin-male-armory.jpg) |
 | ![Orc female with HD body and weapon](docs/screenshots/05-orc-female-armory-hd.jpg) | ![Sharpen pass compare (before / after)](docs/screenshots/06-sharpen-compare.jpg) |
 | ![Foe Reaper 4000 boss bar and announcement, Westfall](docs/screenshots/07-boss-foe-reaper-announce.jpg) | ![Elwynn Forest with the v3.1 renderer upgrade preview](docs/screenshots/08-elwynn-renderer-v3-1.jpg) |
+| ![Felguard demons in Elwynn](docs/screenshots/09-demon-felguards.jpg) | ![Imps against a warrior](docs/screenshots/10-demon-imps-warrior.jpg) |
+| ![Demon hunter demons](docs/screenshots/11-demon-hunter-demons.jpg) | ![Orc male in combat](docs/screenshots/12-orc-male-combat.jpg) |
+| ![Warlock with Corruption](docs/screenshots/13-warlock-corruption.jpg) | |
 
 ## Requirements
 
