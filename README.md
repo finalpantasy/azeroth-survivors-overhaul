@@ -32,6 +32,7 @@ These are frames from automated runs of local preview builds (1280x720). They sh
 | ![Combat in Elwynn](docs/screenshots/01-combat-elwynn-mage.jpg) | ![Boss Old Murk-Eye, Westfall content](docs/screenshots/02-boss-old-murk-eye.jpg) |
 | ![Goblin female in the Armory](docs/screenshots/03-goblin-female-armory.jpg) | ![Goblin male in the Armory](docs/screenshots/04-goblin-male-armory.jpg) |
 | ![Orc female with HD body and weapon](docs/screenshots/05-orc-female-armory-hd.jpg) | ![Sharpen pass compare (before / after)](docs/screenshots/06-sharpen-compare.jpg) |
+| ![Foe Reaper 4000 boss bar and announcement, Westfall](docs/screenshots/07-boss-foe-reaper-announce.jpg) | |
 
 ## Requirements
 
@@ -42,6 +43,8 @@ These are frames from automated runs of local preview builds (1280x720). They sh
 * Community HD packages need files you obtain yourself; the installer verifies every byte against the recipe.
 
 ## Install and roll back
+
+The CascLib reader is built from the included source (needs Visual Studio Build Tools and CMake): `powershell tools/casc-offline/build.ps1`, then pass the resulting DLL as `--casc-dll`. See `tools/casc-offline/README.md`.
 
 ```
 cd tools/installer
