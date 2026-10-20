@@ -5,12 +5,8 @@
   "commit": "4971d363e665551ac4142f541e5f2d71f1cda653",
   "archive_sha256": "527920b8a48febb7da8fa72beee187cbd0a65cd377400b3160298d37fed34413",
   "source_root": "mod-tools/casc-offline/source",
-  "source_file_count": 124,
+  "source_file_count": 123,
   "source_files": [
-    {
-      "path": ".gitattributes",
-      "sha256": "79c0faab30dc986fe05f2f0e11ecbcdc1954a3ec971d81e193d8e834572ce98c"
-    },
     {
       "path": ".gitignore",
       "sha256": "11bfb675fe6a60a005006082a9435e6275a2d88f14a6cae7b43c51436c201170"
@@ -524,5 +520,5 @@
     "CASC_UNICODE": "ON",
     "CMAKE_DISABLE_FIND_PACKAGE_ZLIB": "ON"
   },
-  "note": "listfile/listfile.txt (76 MB, extracted from listfile-archive.zip) is not shipped in this repository."
+  "note": "Not shipped: listfile/listfile.txt (76 MB, extracted from listfile-archive.zip) and .gitattributes (it would override the repository line-ending policy and break the hash pins)."
 }
