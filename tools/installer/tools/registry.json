@@ -3,7 +3,7 @@
   "tools": {
     "casc-export": {
       "script": "casc_export.py",
-      "sha256": "a88ba3ac48c3bfaea255510bd2ba6ea1a4676d0f53ef42cb73f69fe28896f4d9",
+      "sha256": "714d31764f13f18434dd9bd894177250ef20dc5fba9defdd2010e44079d6eb20",
       "search": [
         "tools"
       ],
@@ -11,7 +11,7 @@
     },
     "casc-adapter": {
       "script": "casc_offline.py",
-      "sha256": "382c42901e6fd77c57035ae51589baff9bb151326cc7c309156de87d67270950",
+      "sha256": "2db28fb1de1007b770f592c3bcbfe834de9449b46498261f956a76695971b3b3",
       "search": [
         "tools",
         "../casc-offline"
@@ -29,7 +29,7 @@
     },
     "rigid-converter": {
       "script": "build_retail_rigid.py",
-      "sha256": "48b5e93ccaedeaf3233fbdd743b9e23b98b299fe08dfbb2b5425fc5f00347856",
+      "sha256": "a9b4f93f7c6b50486d96ccf51a01f1142f6611f6da7e0aced663ccbc962e8fff",
       "search": [
         "tools",
         "../retail-rigid-preview"
@@ -65,7 +65,7 @@
     },
     "spells-fx-converter": {
       "script": "spells_step.py",
-      "sha256": "b35ea6b187821bf07a585bd63dd9c0c61092a69193e0d759f84969de4bca8ddc",
+      "sha256": "65c613d4386e124eed1a4ead1abc5cd37d98a13dcd2496073b80345c167d8230",
       "search": [
         "tools",
         "../spells"
