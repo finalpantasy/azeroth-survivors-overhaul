@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-dwarf-female",
+  "version": "0.0.1",
+  "title": "HD player body: Dwarf female (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Dwarf female player model (display 54) with a community HD body via private CreatureModelData row 2371, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Dwarf/Female/DwarfFemale.m2 sha256 548c725240ba5678092ff7dd3ca0673ec1285a5902a150ba52dc37f163eb0dfc. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Dwarf\\Female\\DwarfFemaleHD.m2; repaired M2 sha256 858f89d05eb94ce7ea04de60edc6cab6ba8847b1d9edac1402413e3177d273a9, staged (vertex-trimmed) sha256 a7518634bddd093c3f3ed4e8f4334c0395330bd51f9f7863e5768126df068a87; 250 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

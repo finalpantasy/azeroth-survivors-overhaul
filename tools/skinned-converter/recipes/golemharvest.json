@@ -1,0 +1,35 @@
+{
+  "name": "GolemHarvest",
+  "note": "Harvest golem (Westfall; CreatureModelData 71, displays 71/367/378/379/514/548/1150). The native model is missing from the data, so there is no template; creature/golemharvest/golemharvest.m2 (FileDataID 124235, byte-identical in Forever and Retail) is the classic geometry. Its BLPs are offline in the local Forever client (CascLib 4350), so the recipe reads Retail. Displays use HarvestGolemSkin<Color> (type 11, variation 0) and HarvestGolemBits<Color> (type 12, variation 1).",
+  "source": {
+    "profile": "retail",
+    "model": 124235,
+    "lod": 0
+  },
+  "native_model_path": "Creature/GolemHarvest/GolemHarvest.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/GolemHarvest/HarvestGolemSkinBrown.blp": 124240,
+        "Creature/GolemHarvest/HarvestGolemSkinGrey.blp": 124241,
+        "Creature/GolemHarvest/HarvestGolemSkinBlue.blp": 124239
+      }
+    },
+    "1": {
+      "replaceable": true,
+      "skins": {
+        "Creature/GolemHarvest/HarvestGolemBitsBrown.blp": 124237,
+        "Creature/GolemHarvest/HarvestGolemBitsGrey.blp": 124238,
+        "Creature/GolemHarvest/HarvestGolemBitsBlue.blp": 124236
+      }
+    },
+    "2": {
+      "fdid": 124242,
+      "path": "Creature/GolemHarvest/red_glow3.blp"
+    }
+  },
+  "env_layers": "drop",
+  "scale": 1.0,
+  "trim_bones": true
+}

@@ -1,0 +1,111 @@
+{
+  "_comment": "Candidates for the combined 'next' build. An item is included only when its verification rule holds. Rules: installed-in-main = the recipe's output is already byte-present in the main install (read-only content check); status-file = the regex matches (DOTALL) in coordination/workers/<file>; coordinator = named by the coordinator in writing. Characters are read from the table in characters.md (see next_build.py).",
+  "items": [
+    {
+      "id": "terrain",
+      "recipes": [
+        "hd-terrain-community"
+      ],
+      "verify": {
+        "kind": "installed-in-main"
+      }
+    },
+    {
+      "id": "spells",
+      "recipes": [
+        "hd-spells-community"
+      ],
+      "verify": {
+        "kind": "installed-in-main"
+      }
+    },
+    {
+      "id": "mace",
+      "recipes": [
+        "retail-mace-kultiras-silver"
+      ],
+      "verify": {
+        "kind": "installed-in-main"
+      }
+    },
+    {
+      "id": "renderer-v3-post",
+      "recipes": [
+        "renderer-v3-post"
+      ],
+      "verify": {
+        "kind": "status-file",
+        "file": "renderer.md",
+        "pattern": "(?i)renderer-v3-post[^\\n]{0,200}\\bVERIFIED\\b"
+      }
+    },
+    {
+      "id": "renderer-water",
+      "recipes": [
+        "water-shader-adt-liquid"
+      ],
+      "verify": {
+        "kind": "coordinator",
+        "note": "named for the next build by the coordinator on 2026-10-19 (water EXE patch ran in characters-v0.103.0 and the lab)"
+      }
+    },
+    {
+      "id": "skinned-kobold",
+      "recipes": [
+        "skinned-kobold-forever"
+      ],
+      "verify": {
+        "kind": "status-file",
+        "file": "skinned.md",
+        "pattern": "(?:lab-skinned-kobold-elwynn-\\d{8}-\\d{6}` PASS|Lab PASS:[^\\n]*lab-skinned-kobold-elwynn-\\d{8}-\\d{6})"
+      }
+    },
+    {
+      "id": "skinned-murloc",
+      "recipes": [
+        "skinned-murloc-forever"
+      ],
+      "verify": {
+        "kind": "status-file",
+        "file": "skinned.md",
+        "pattern": "(?i)murloc[^\\n]{0,120}\\bVERIFIED\\b"
+      }
+    },
+    {
+      "id": "skinned-gnoll",
+      "recipes": [
+        "skinned-gnoll-forever"
+      ],
+      "verify": {
+        "kind": "status-file",
+        "file": "skinned.md",
+        "pattern": "(?i)gnoll[^\\n]{0,120}\\bVERIFIED\\b"
+      }
+    },
+    {
+      "id": "skinned-raptor",
+      "recipes": [
+        "skinned-raptor-forever"
+      ],
+      "verify": {
+        "kind": "status-file",
+        "file": "skinned.md",
+        "pattern": "(?i)raptor[^\\n]{0,120}\\bVERIFIED\\b"
+      }
+    }
+  ],
+  "characters": {
+    "file": "characters.md",
+    "recipe": "hd-characters-next"
+  },
+  "priority": [
+    "skinned-kobold-forever",
+    "skinned-murloc-forever",
+    "skinned-gnoll-forever",
+    "skinned-raptor-forever",
+    "hd-characters-next",
+    "hd-spells-community",
+    "retail-mace-kultiras-silver",
+    "hd-terrain-community"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-nightelf-female",
+  "version": "0.0.1",
+  "title": "HD player body: NightElf female (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the NightElf female player model (display 56) with a community HD body via private CreatureModelData row 2373, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Nightelf/Female/NightElfFemale.m2 sha256 7bf3792848d87fc27d358537e1292ba9c31a6711adc1480e9ef02bc31e052306. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\NightElf\\Female\\NightElfFemaleHD.m2; repaired M2 sha256 d664a8f84ee2110898b3feff1236df07dbb5b02f1d5763bb702fa093996ed86d, staged (vertex-trimmed) sha256 4c9324d46f720b9332830ba672859bf3e2801c71a652044f7637f37c0bf6603e; 255 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

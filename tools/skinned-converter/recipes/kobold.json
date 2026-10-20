@@ -1,0 +1,33 @@
+{
+  "name": "Kobold",
+  "note": "Kobold Vermin / Geomancer / Taskmaster (Elwynn): native Creature/Kobold/Kobold.m2 (CreatureModelData 26) -> Forever creature/kobold2/kobold2.m2. Native displays use KoboldSkinNormal / KoboldSkinAlbino (type 11), so the modern skins are published under those names and every display keeps its skin.",
+  "source": {
+    "profile": "forever",
+    "model": 1139464,
+    "lod": 0
+  },
+  "native_model_path": "Creature/Kobold/Kobold.m2",
+  "geosets": [
+    0,
+    101
+  ],
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Kobold/KoboldSkinNormal.blp": 1139486,
+        "Creature/Kobold/KoboldSkinAlbino.blp": 1139484
+      }
+    },
+    "1": {
+      "fdid": 1139485,
+      "path": "Creature/Kobold/Kobold2_Hat01.blp"
+    }
+  },
+  "env_layers": "split",
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 950
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-troll-male",
+  "version": "0.0.1",
+  "title": "HD player body: Troll male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Troll male player model (display 1478) with a community HD body via private CreatureModelData row 2380, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Troll/Male/TrollMale.m2 sha256 8c4fd889ec59faeb84be1417b66eb77a04388fcab0eeead4926660ac6cca24ab. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Troll\\Male\\TrollMaleHD.m2; repaired M2 sha256 5f39c4dc4202eae53b512959b905c36847698fd3778bcbc8d28c04e8b03460a4, staged (vertex-trimmed) sha256 fa7540c7e3f2fe300cdd12a3d7efa94a5a11797699828c489c2feca5cf7b88ba; 230 CharSections rows, 3 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

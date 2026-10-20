@@ -1,0 +1,34 @@
+{
+  "name": "Raptor",
+  "note": "Un'Goro Ravasaurs / raptors: native Creature/Raptor/Raptor.m2 (CreatureModelData 34) -> Forever creature/raptor2/raptor2.m2. Native displays use RaptorSkin<Color> (type 11); nearest modern colors: Grey->darkgreen, MottledBlueGreen->blue, MottledDarkGreen->darkgreen, Orange->red, Violet->blue, Yellow->yellow, Red->red.",
+  "source": {
+    "profile": "forever",
+    "model": 1043712,
+    "lod": 2
+  },
+  "native_model_path": "Creature/Raptor/Raptor.m2",
+  "geosets": [
+    0
+  ],
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Raptor/RaptorSkinGrey.blp": 1043771,
+        "Creature/Raptor/RaptorSkinMottledBlueGreen.blp": 1043770,
+        "Creature/Raptor/RaptorSkinMottledDarkGreen.blp": 1043771,
+        "Creature/Raptor/RaptorSkinOrange.blp": 1043751,
+        "Creature/Raptor/RaptorSkinRed.blp": 1043751,
+        "Creature/Raptor/RaptorSkinViolet.blp": 1043770,
+        "Creature/Raptor/RaptorSkinYellow.blp": 1043773
+      }
+    },
+    "1": {
+      "fdid": 1043752,
+      "path": "Creature/Raptor/Raptor2_OrbReflect.blp"
+    }
+  },
+  "env_layers": "drop",
+  "scale": 1.0,
+  "trim_bones": true
+}

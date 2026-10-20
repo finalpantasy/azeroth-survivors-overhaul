@@ -1,0 +1,33 @@
+{
+  "name": "Infernal",
+  "note": "Infernal (CreatureModelData 24) -> creature/infernal2/infernal2_low.m2 LOD 2 (gray body, fel fire), decimated. Native displays only set variation 0, so the fx slots (types 12/13) are fixed.",
+  "source": {
+    "profile": "forever",
+    "model": 1472486,
+    "lod": 2
+  },
+  "native_model_path": "Creature/Infernal/Infernal.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Infernal/InfernalSkin.blp": 1101625
+      }
+    },
+    "1": {
+      "fdid": 1706328,
+      "path": "Creature/Infernal/Infernal2_fx01_fel.blp"
+    },
+    "2": {
+      "fdid": 1706329,
+      "path": "Creature/Infernal/Infernal2_fx02_fel.blp"
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 2500
+  }
+}

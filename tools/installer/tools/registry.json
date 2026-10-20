@@ -1,0 +1,85 @@
+{
+  "schema": "as-tools/1",
+  "tools": {
+    "casc-export": {
+      "script": "casc_export.py",
+      "sha256": "a88ba3ac48c3bfaea255510bd2ba6ea1a4676d0f53ef42cb73f69fe28896f4d9",
+      "search": [
+        "tools"
+      ],
+      "note": "offline CASC exporter, installer fork of export_local_assets.py (adds --catalog)"
+    },
+    "casc-adapter": {
+      "script": "casc_offline.py",
+      "sha256": "382c42901e6fd77c57035ae51589baff9bb151326cc7c309156de87d67270950",
+      "search": [
+        "tools",
+        "../casc-offline"
+      ],
+      "note": "audited offline CascLib ctypes adapter"
+    },
+    "mpq-packer": {
+      "script": "pack-mpq.py",
+      "sha256": "6a9c2ac8de034fb393e1ec2b6259b5fb519ca64ef426553974006a1d1f07296e",
+      "search": [
+        "tools",
+        ".."
+      ],
+      "note": "deterministic MPQ v1 writer"
+    },
+    "rigid-converter": {
+      "script": "build_retail_rigid.py",
+      "sha256": "48b5e93ccaedeaf3233fbdd743b9e23b98b299fe08dfbb2b5425fc5f00347856",
+      "search": [
+        "tools",
+        "../retail-rigid-preview"
+      ],
+      "argv": [
+        "--source-dir",
+        "{in:src}",
+        "--output-dir",
+        "{out}",
+        "--packer",
+        "{tool:mpq-packer}"
+      ],
+      "timeout": 120,
+      "note": "pinned static rigid-model converter (Retail MD20 v274 -> v256) for the Kultiras silver mace"
+    },
+    "skinned-converter": {
+      "script": "skinned_step.py",
+      "sha256": "30e8e65723fe050594d3f8c4c8d52cc37d2fb26e3e47c258a7bafb70dd6c6c51",
+      "search": [
+        "tools",
+        "../skinned-converter"
+      ],
+      "argv": [
+        "--source-dir",
+        "{in:src}",
+        "--game-dir",
+        "{in:base}",
+        "--output-dir",
+        "{out}"
+      ],
+      "timeout": 600,
+      "note": "skinned (animated) modern M2 v274 -> native MD20 v256 converter (W8, R4); pins m2ir.py, skinned_convert.py and recipes/*.json itself"
+    },
+    "spells-fx-converter": {
+      "script": "spells_step.py",
+      "sha256": "b35ea6b187821bf07a585bd63dd9c0c61092a69193e0d759f84969de4bca8ddc",
+      "search": [
+        "tools",
+        "../spells"
+      ],
+      "argv": [
+        "--source-dir",
+        "{in:src}",
+        "--game-dir",
+        "{in:base}",
+        "--output-dir",
+        "{out}"
+      ],
+      "timeout": 900,
+      "note": "Retail spell-effect M2 -> native MD20 v256 with particle/ribbon translation (W9, R7); pins its own modules"
+    }
+  }
+}

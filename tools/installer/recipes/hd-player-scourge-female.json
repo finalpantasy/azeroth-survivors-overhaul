@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-scourge-female",
+  "version": "0.0.1",
+  "title": "HD player body: Scourge female (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Scourge female player model (display 58) with a community HD body via private CreatureModelData row 2375, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Scourge/Female/ScourgeFemale.m2 sha256 882a8cf9eb06685ba242d66bb9af829f83a8028e5f7399f69e43fd80be050acb. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Scourge\\Female\\ScourgeFemaleHD.m2; repaired M2 sha256 69d843706ec8a67dd87f05dc8e36d98287ebef1c4b4cb924dd3372c1c055bd09, staged (vertex-trimmed) sha256 f0f95cc50bc774bf9eeabf3272bc4a88bf720366fbad5ca95ad7a197d30ad8fd; 252 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-troll-female",
+  "version": "0.0.1",
+  "title": "HD player body: Troll female (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Troll female player model (display 1479) with a community HD body via private CreatureModelData row 2381, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Troll/Female/TrollFemale.m2 sha256 5212ddc432aa21919532baa7b8416ee23bad142b6b833813f478388b31c06b33. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Troll\\Female\\TrollFemaleHD.m2; repaired M2 sha256 c5d963705568f42f414e8ba14cc633168ea7e9ea8891a63cdf382c1a2d69ffd4, staged (vertex-trimmed) sha256 a7e949b730adafd3bb2d7386e81effbb9e23996898a8e31da79317c0e8e8e528; 116 CharSections rows, 6 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Gnoll",
+  "note": "Riverpaw gnolls (Elwynn): native Creature/Gnoll/gnoll.m2 (CreatureModelData 10) -> Forever creature/gnoll2/gnoll2.m2. Native displays use <Clan>GnollWhelpSkin (type 11 only), so the modern body skins are published under those names; the modern armor slot (type 12, unused by native displays) is fixed to gnoll2_armor_brown.",
+  "source": {
+    "profile": "forever",
+    "model": 3886641,
+    "lod": 7
+  },
+  "native_model_path": "Creature/Gnoll/gnoll.m2",
+  "textures": {
+    "0": {
+      "fdid": 3886645,
+      "path": "Creature/Gnoll/Gnoll2_ArmorBrown.blp"
+    },
+    "1": {
+      "fdid": 3886653,
+      "path": "Creature/Gnoll/Gnoll2_Reflect.blp"
+    },
+    "2": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Gnoll/RiverPawGnollWhelpSkin.blp": 3886649,
+        "Creature/Gnoll/ShadowHideGnollWhelpSkin.blp": 3886650,
+        "Creature/Gnoll/RedRidgeGnollWhelpSkin.blp": 3886651,
+        "Creature/Gnoll/MossHideGnollWhelpSkin.blp": 3886652,
+        "Creature/Gnoll/RothideGnollWhelpSkin.blp": 3887343
+      }
+    }
+  },
+  "env_layers": "drop",
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 850
+  }
+}

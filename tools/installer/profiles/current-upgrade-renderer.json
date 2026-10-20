@@ -1,0 +1,18 @@
+{
+  "schema": "as-profile/1",
+  "id": "current-upgrade-renderer",
+  "version": "0.1.0",
+  "title": "Current upgrade plus the staged renderer patches (experimental)",
+  "description": "Everything in current-upgrade plus the ADT water shader patch and the renderer v3 sharpen shader (both for official v0.103.1). Both are experimental and edit the EXE; their byte edits are disjoint so they compose into one patched executable.",
+  "recipes": [
+    "hd-terrain-community",
+    "hd-spells-community",
+    "retail-mace-kultiras-silver",
+    "water-shader-adt-liquid",
+    "renderer-v3-post"
+  ],
+  "allow_experimental": true,
+  "expect_slot_sha256": {
+    "patch-0.MPQ": "144d9b4274086657f0e0e6f3307956237d7c7c97c0c71a53e30c914c82dc2e95"
+  }
+}

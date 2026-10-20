@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-tauren-male",
+  "version": "0.0.1",
+  "title": "HD player body: Tauren male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Tauren male player model (display 59) with a community HD body via private CreatureModelData row 2376, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Tauren/Male/TaurenMale.m2 sha256 eac1ebe242071b2f074c83831ff0c2e23a8437cab6d28b8ae458992871bf9767. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Tauren\\Male\\TaurenMaleHD.m2; repaired M2 sha256 151b03021fdf8541814a204eabf18157bbfd5e5fecd9996c25800edefd9756ba, staged (vertex-trimmed) sha256 b01398e89503d7a2fa1bcd719da153463818557101c3d3c327e8003c12e3fe86; 157 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

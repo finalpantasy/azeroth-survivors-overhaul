@@ -1,0 +1,27 @@
+{
+  "name": "FelGuard",
+  "note": "Felguard (CreatureModelData 551) -> creature/felguard2_megalow/felguard2_megalow.m2, decimated.",
+  "source": {
+    "profile": "forever",
+    "model": 1711518,
+    "lod": 0
+  },
+  "native_model_path": "Creature/FelGuard/FelGuard.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/FelGuard/FelGuardSkinBlack.blp": 1712084,
+        "Creature/FelGuard/FelGuardSkinBlue.blp": 1712083,
+        "Creature/FelGuard/FelGuardSkinYellow.blp": 1712087
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 2000
+  }
+}

@@ -1,0 +1,12 @@
+[package]
+name = "wgsl-validate"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# Pinned to the composer/compiler versions Bevy 0.18.1 (the engine's Bevy) uses.
+[dependencies]
+naga_oil = { version = "=0.20.0", default-features = false }
+naga = { version = "=27.0.3", features = ["wgsl-in", "spv-out", "hlsl-out"] }
+
+[workspace]

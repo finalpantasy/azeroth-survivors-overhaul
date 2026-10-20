@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-nightelf-male",
+  "version": "0.0.1",
+  "title": "HD player body: NightElf male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the NightElf male player model (display 55) with a community HD body via private CreatureModelData row 2372, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Nightelf/Male/NightElfMale.m2 sha256 dcca79afd4cb243175df8e8223897018c5055f451748a233f596206740e086df. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\NightElf\\Male\\NightElfMaleHD.m2; repaired M2 sha256 ea1dbce161b48a411b926c9be5fa93ab67c2b0a496391333a2b7e8bd372cad7a, staged (vertex-trimmed) sha256 170025f110ae7dc6c9e563ad638b09810d160ccf36fcde504c16319cbdf6e609; 215 CharSections rows, 41 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

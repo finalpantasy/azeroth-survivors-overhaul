@@ -1,0 +1,32 @@
+{
+  "name": "Murloc",
+  "note": "Murloc Streamrunner (Elwynn): native Creature/Murloc/Murloc.m2 (CreatureModelData 31) -> Forever creature/murloc2/murloc2.m2. Native displays use Sahauginskin{,Blue,Gray,Orange,White} (type 11); the modern skins are published under those names. No grey murloc2 skin exists: Gray uses murloc2_murk.",
+  "source": {
+    "profile": "forever",
+    "model": 1113034,
+    "lod": 0
+  },
+  "native_model_path": "Creature/Murloc/Murloc.m2",
+  "geosets": [
+    0
+  ],
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Murloc/Sahauginskin.blp": 1113058,
+        "Creature/Murloc/SahauginskinBlue.blp": 1113057,
+        "Creature/Murloc/SahauginskinGray.blp": 1115036,
+        "Creature/Murloc/SahauginskinOrange.blp": 1113059,
+        "Creature/Murloc/SahauginskinWhite.blp": 1113061
+      }
+    },
+    "1": {
+      "fdid": 1113046,
+      "path": "Creature/Murloc/Murloc2_ArmorReflect.blp"
+    }
+  },
+  "env_layers": "drop",
+  "scale": 1.0,
+  "trim_bones": true
+}

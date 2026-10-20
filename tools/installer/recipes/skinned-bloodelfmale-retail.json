@@ -1,0 +1,496 @@
+{
+ "schema": "as-recipe/1",
+ "id": "skinned-bloodelfmale-retail",
+ "version": "0.1.0",
+ "title": "Animated Retail BloodElfMale model (Character\\BloodElf\\Male\\BloodElfMale.m2)",
+ "description": "Exports the Retail (12.1.5.70448) bloodelfmale model, its LOD 0 skin, animations and skins from your own client and converts them to the game's animated MD20 v256 model at Character\\BloodElf\\Male\\BloodElfMale.m2, replacing the native model for every creature that uses it.",
+ "status": "experimental",
+ "default": false,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "skinned-converter"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "retail": {
+   "kind": "casc",
+   "product": "wow",
+   "version": "12.1.5.70448",
+   "build_number": 70448,
+   "build_key": "88d5e8ef05ec5a8446cdec93d142d7c6",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 87836,
+    "sha256": "f80e4cb45b64a3e00f94db5b6eafc45dfdd03b0734282c1369bcff9443062ba1"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 117168,
+     "name": "117168.bin",
+     "bytes": 2564,
+     "sha256": "76cd027648990bd78d8ce692a20dd0283d627de9a305b234908cf941ec66b2e8",
+     "role": "BLP for Character\\BloodElf\\Male\\BloodElfFemaleEyeGlowGreen.blp"
+    },
+    {
+     "file_data_id": 117170,
+     "name": "117170.bin",
+     "bytes": 2013876,
+     "sha256": "fc465d93c99a2201b8ff349561fc216b49871a485e988611be879b9c6bd3a6eb",
+     "role": "model"
+    },
+    {
+     "file_data_id": 469844,
+     "name": "469844.bin",
+     "bytes": 6840,
+     "sha256": "90aacc949ac2a435f2cf20ed92f60cd7c9589802399e2da3cccef082e194e0d1",
+     "role": "external .anim 133.0"
+    },
+    {
+     "file_data_id": 469845,
+     "name": "469845.bin",
+     "bytes": 9384,
+     "sha256": "854b642eb596f243b2dafd5da253aad6ed2bb45464a37305ebb22b83c977e141",
+     "role": "external .anim 66.0"
+    },
+    {
+     "file_data_id": 469846,
+     "name": "469846.bin",
+     "bytes": 5704,
+     "sha256": "232eaabdf3f35989e4ddb5e19f9f72cd4a7e9974690dd1149c75d77520c20214",
+     "role": "external .anim 67.0"
+    },
+    {
+     "file_data_id": 469847,
+     "name": "469847.bin",
+     "bytes": 11048,
+     "sha256": "c17b1ee857d3ce5bb2aef9a7bcb0cbb4f43547c2613a1d51a642bed86d564e5c",
+     "role": "external .anim 75.0"
+    },
+    {
+     "file_data_id": 469848,
+     "name": "469848.bin",
+     "bytes": 104368,
+     "sha256": "553faa1326303c46b59717b7fecf6cdcacdc4614ef4421ef17d1c5f343f50955",
+     "role": "skin LOD 0"
+    },
+    {
+     "file_data_id": 469849,
+     "name": "469849.bin",
+     "bytes": 12216,
+     "sha256": "f8f217e18a75ed7693365edf4cd803b34947c1d1878e91262019934453c2a844",
+     "role": "external .anim 82.0"
+    },
+    {
+     "file_data_id": 469850,
+     "name": "469850.bin",
+     "bytes": 14568,
+     "sha256": "6789fc6b6e66c253794469cc94b87dee4eb04df47c3a08b01a7b5a508354885c",
+     "role": "external .anim 113.0"
+    },
+    {
+     "file_data_id": 469851,
+     "name": "469851.bin",
+     "bytes": 15720,
+     "sha256": "f2a09866a4b7e611fddbd3355b3aea1d5de99ccc31571b74e7a30944651afbe3",
+     "role": "external .anim 77.0"
+    },
+    {
+     "file_data_id": 469852,
+     "name": "469852.bin",
+     "bytes": 7208,
+     "sha256": "047162f626bad96114be47a7f54a21b1508f77a7fc851bba68ffd761fd602498",
+     "role": "external .anim 123.0"
+    },
+    {
+     "file_data_id": 469853,
+     "name": "469853.bin",
+     "bytes": 12344,
+     "sha256": "fe5935b24092cb814c71bea0365b250ddf7f2207a437f616f8a2bf275d8dbb4c",
+     "role": "external .anim 98.0"
+    },
+    {
+     "file_data_id": 469854,
+     "name": "469854.bin",
+     "bytes": 1960,
+     "sha256": "0bce233833293a4c29339e02f6b2a389420fb8f775f8184a81c47d647b3ca12e",
+     "role": "external .anim 104.0"
+    },
+    {
+     "file_data_id": 469855,
+     "name": "469855.bin",
+     "bytes": 2216,
+     "sha256": "9a21cf702bd5d1f17fe315ffb0db6e8498a0248ee1b699c8f85f453e23715031",
+     "role": "external .anim 128.0"
+    },
+    {
+     "file_data_id": 469856,
+     "name": "469856.bin",
+     "bytes": 9336,
+     "sha256": "7f6289d195178c1b74521497793a86a16b5869853c46615591c5a2237516f335",
+     "role": "external .anim 80.0"
+    },
+    {
+     "file_data_id": 469858,
+     "name": "469858.bin",
+     "bytes": 10328,
+     "sha256": "e38212bc4323c5a6971dda2d8f0d06b3c9645da515ac523cad6303fd4adfc933",
+     "role": "external .anim 79.0"
+    },
+    {
+     "file_data_id": 469859,
+     "name": "469859.bin",
+     "bytes": 5976,
+     "sha256": "dcebaaaacc98e50e59447005ba2806b548fd2e87de4e0399aaeef64ac45639e2",
+     "role": "external .anim 223.0"
+    },
+    {
+     "file_data_id": 469860,
+     "name": "469860.bin",
+     "bytes": 1928,
+     "sha256": "ec644fe0fdd6d4b1cc19ff77cef8c47483e6544b9d1ebc108020cac5de58af6d",
+     "role": "external .anim 103.0"
+    },
+    {
+     "file_data_id": 469861,
+     "name": "469861.bin",
+     "bytes": 48280,
+     "sha256": "8ca4b9db7138f8e66ce6152d8854988a2eef0695a831cef0009594860166aedc",
+     "role": "external .anim 69.2"
+    },
+    {
+     "file_data_id": 469862,
+     "name": "469862.bin",
+     "bytes": 15224,
+     "sha256": "11eef22a022aa479f324991654371e22f17a074d3d3c351eca5b2ef5a678bf51",
+     "role": "external .anim 70.0"
+    },
+    {
+     "file_data_id": 469863,
+     "name": "469863.bin",
+     "bytes": 7192,
+     "sha256": "70d3d0a91c30c5f90b07d3686a35e843399b4b656139a96bb144e19d1c492a3d",
+     "role": "external .anim 64.0"
+    },
+    {
+     "file_data_id": 469864,
+     "name": "469864.bin",
+     "bytes": 6168,
+     "sha256": "c08a2ac005a6de5222b7c2e9f62274b14b1359a316c0eedb265bb693bd759213",
+     "role": "external .anim 69.3"
+    },
+    {
+     "file_data_id": 469865,
+     "name": "469865.bin",
+     "bytes": 13704,
+     "sha256": "1685d698b8d5c9ba0183934ee37eedf5a80bf8c8ea3a04afcba848a638b5890f",
+     "role": "external .anim 78.0"
+    },
+    {
+     "file_data_id": 469866,
+     "name": "469866.bin",
+     "bytes": 7416,
+     "sha256": "df4602ac8e2e26f9d14c95e695f8278a8b6c5a565cc2070d2dfb48a2c9a07d23",
+     "role": "external .anim 65.0"
+    },
+    {
+     "file_data_id": 469867,
+     "name": "469867.bin",
+     "bytes": 43176,
+     "sha256": "0e1b865cc719494f85f21132581339874afb8136d6f0a5b3a8a8c66555de2c7a",
+     "role": "external .anim 69.0"
+    },
+    {
+     "file_data_id": 469868,
+     "name": "469868.bin",
+     "bytes": 10088,
+     "sha256": "caac0500b561a36ebad325f75c7a482568e199ba5a97c2407723e629593bc1bb",
+     "role": "external .anim 74.0"
+    },
+    {
+     "file_data_id": 469870,
+     "name": "469870.bin",
+     "bytes": 12632,
+     "sha256": "6b89ebab9f1127ed58941584c569db061d17d144ff8a9def78b7722ca9093b43",
+     "role": "external .anim 68.0"
+    },
+    {
+     "file_data_id": 469871,
+     "name": "469871.bin",
+     "bytes": 13944,
+     "sha256": "61839c4856afd44b3baca15279116209c6ec7843ca721068613bfa9c6c1147a8",
+     "role": "external .anim 101.0"
+    },
+    {
+     "file_data_id": 469872,
+     "name": "469872.bin",
+     "bytes": 19048,
+     "sha256": "7a695b9fa7f7ebf96855f45b3a22c8c3c4baa08b9c99034e15a206fb1a808db0",
+     "role": "external .anim 61.0"
+    },
+    {
+     "file_data_id": 469873,
+     "name": "469873.bin",
+     "bytes": 11944,
+     "sha256": "95fb479e3cc027bd3c388cfcd123a88a9875c23ba663db895844593753db906f",
+     "role": "external .anim 62.0"
+    },
+    {
+     "file_data_id": 469874,
+     "name": "469874.bin",
+     "bytes": 6008,
+     "sha256": "e429e7f10bc0c09ca147496edc9bc925dbb66a7a8a50dd0f2d8c45892b5efde4",
+     "role": "external .anim 119.0"
+    },
+    {
+     "file_data_id": 469875,
+     "name": "469875.bin",
+     "bytes": 2152,
+     "sha256": "9c86ff2df294e48713378308be47c95ca566c9fa73d42eec7b2d6f318a0f3e47",
+     "role": "external .anim 129.0"
+    },
+    {
+     "file_data_id": 469877,
+     "name": "469877.bin",
+     "bytes": 2904,
+     "sha256": "21fbb594a8972217a1fb376b1e4eac7690b2135be2bbf7f4187c87bbeccb73ec",
+     "role": "external .anim 100.0"
+    },
+    {
+     "file_data_id": 469878,
+     "name": "469878.bin",
+     "bytes": 5688,
+     "sha256": "290657de3e778660bd7c57f68e61481c6373e6e8fe3b3e58b12952ea332f9c5e",
+     "role": "external .anim 186.0"
+    },
+    {
+     "file_data_id": 469879,
+     "name": "469879.bin",
+     "bytes": 8632,
+     "sha256": "bdeb8be5cba2340a649138eec1e8db7f6d76710646a4431f455d4584a30c9fce",
+     "role": "external .anim 81.0"
+    },
+    {
+     "file_data_id": 469880,
+     "name": "469880.bin",
+     "bytes": 11144,
+     "sha256": "efa4fbf96869c33fe678ea0461719485aa24f5f37b6748cc6749d2cc181af616",
+     "role": "external .anim 96.0"
+    },
+    {
+     "file_data_id": 469881,
+     "name": "469881.bin",
+     "bytes": 6424,
+     "sha256": "f4445e74877bd04da6c24190880fdd57dd83816cace27b8a5a0bf3aa0f23817c",
+     "role": "external .anim 76.0"
+    },
+    {
+     "file_data_id": 469882,
+     "name": "469882.bin",
+     "bytes": 2632,
+     "sha256": "997d29aca1b1642f703c6b44053c624db93d0c75817342675a69c32d02ef7c2a",
+     "role": "external .anim 102.0"
+    },
+    {
+     "file_data_id": 469883,
+     "name": "469883.bin",
+     "bytes": 21208,
+     "sha256": "101c4995cb9b58858b50d382d66ce1167da8c8421ce6a16303d01c47e760a9a5",
+     "role": "external .anim 69.4"
+    },
+    {
+     "file_data_id": 469884,
+     "name": "469884.bin",
+     "bytes": 9256,
+     "sha256": "1edced49d9d9070a4df28721e43e077b465ac33719761069fde7092a708aeb33",
+     "role": "external .anim 73.0"
+    },
+    {
+     "file_data_id": 469885,
+     "name": "469885.bin",
+     "bytes": 3880,
+     "sha256": "b1ca28ffa39d1928df501c17ef4ca7ac4855be8c462ad8ee1f605c65cb401ec8",
+     "role": "external .anim 134.0"
+    },
+    {
+     "file_data_id": 469886,
+     "name": "469886.bin",
+     "bytes": 4472,
+     "sha256": "828adfdd1fb32efa84d08f82e740f8f7d9513ed226e853ea27d5bf4a82446471",
+     "role": "external .anim 120.0"
+    },
+    {
+     "file_data_id": 469887,
+     "name": "469887.bin",
+     "bytes": 34808,
+     "sha256": "8724f18d41da5b4df7649a9e58a2a5f03ad3aec86ed6452993d5e6f2b2d99353",
+     "role": "external .anim 69.1"
+    },
+    {
+     "file_data_id": 469888,
+     "name": "469888.bin",
+     "bytes": 2744,
+     "sha256": "a15c83bcbab1d5eb4d9734a1c2224f8b1443279c22efb645da7ae04626d26faa",
+     "role": "external .anim 97.0"
+    },
+    {
+     "file_data_id": 469889,
+     "name": "469889.bin",
+     "bytes": 13480,
+     "sha256": "dcdc0c95eb5bc65a6bd34a11aa797b8f3804d7e1de286ee591d20289cee6a52b",
+     "role": "external .anim 60.0"
+    },
+    {
+     "file_data_id": 469890,
+     "name": "469890.bin",
+     "bytes": 10808,
+     "sha256": "e0387e08542e7af59727d5ac922ff0c7c3c9e3d155f9ffd2fd741ab18be9753b",
+     "role": "external .anim 83.0"
+    },
+    {
+     "file_data_id": 469891,
+     "name": "469891.bin",
+     "bytes": 7928,
+     "sha256": "410e300f426fc69a21851d0b62fcde1cff6519bab53c4fd2b713f344c44bad4c",
+     "role": "external .anim 195.0"
+    },
+    {
+     "file_data_id": 469892,
+     "name": "469892.bin",
+     "bytes": 17032,
+     "sha256": "5dabca4626927e9db69ba5320da4a6c73c9b2271374a614c59f29e0f55a3d853",
+     "role": "external .anim 84.0"
+    },
+    {
+     "file_data_id": 469893,
+     "name": "469893.bin",
+     "bytes": 6600,
+     "sha256": "49fcfc9fdf9d60c586a42448425f462fdd7d600b3054c63a8c09be37484461b6",
+     "role": "external .anim 185.0"
+    },
+    {
+     "file_data_id": 515175,
+     "name": "515175.bin",
+     "bytes": 4920,
+     "sha256": "fe115f645ea77e59d2f1425991968a7e72da83efbaeadc94948593903c94b5e2",
+     "role": "external .anim 522.0"
+    },
+    {
+     "file_data_id": 515176,
+     "name": "515176.bin",
+     "bytes": 4216,
+     "sha256": "2d1f25396b01771ef356d5d6880dab787e44328782afe5e54a5f7a110832a49f",
+     "role": "external .anim 520.0"
+    },
+    {
+     "file_data_id": 515177,
+     "name": "515177.bin",
+     "bytes": 5576,
+     "sha256": "df333787ad259d70c1b6b6435884210cfd26d182e82059ca9a48b4685592012a",
+     "role": "external .anim 518.0"
+    },
+    {
+     "file_data_id": 604263,
+     "name": "604263.bin",
+     "bytes": 6488,
+     "sha256": "a5d0c11d42352145f06609c45561d2ae75350a973711e7188370c98872d54994",
+     "role": "external .anim 732.0"
+    }
+   ]
+  },
+  "game-base": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "DBFilesClient\\AnimationData.dbc",
+     "sha256": [
+      "990ebbcb611814c8996e67214224c52775a5f5e09e98fadc187da981f060130d"
+     ],
+     "role": "official AnimationData.dbc (fallback chain); from patch.MPQ"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "retail"
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-base"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "skinned-converter",
+   "inputs": {
+    "src": "export",
+    "base": "base"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Character/BloodElf/Male/BloodElfFemaleEyeGlowGreen.blp",
+     "sha256": "76cd027648990bd78d8ce692a20dd0283d627de9a305b234908cf941ec66b2e8"
+    },
+    {
+     "path": "payload/Character/BloodElf/Male/BloodElfMale.m2",
+     "sha256": "56d2113040519345fba43ea5c2ed2e8c820965d7ff138db25d0fb0baaa894ad8"
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Character\\BloodElf\\Male\\BloodElfFemaleEyeGlowGreen.blp",
+    "from": "convert:payload/Character/BloodElf/Male/BloodElfFemaleEyeGlowGreen.blp",
+    "sha256": "76cd027648990bd78d8ce692a20dd0283d627de9a305b234908cf941ec66b2e8"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Character\\BloodElf\\Male\\BloodElfMale.m2",
+    "from": "convert:payload/Character/BloodElf/Male/BloodElfMale.m2",
+    "sha256": "56d2113040519345fba43ea5c2ed2e8c820965d7ff138db25d0fb0baaa894ad8"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Character\\BloodElf\\Male\\BloodElfMale.m2",
+   "sha256": "56d2113040519345fba43ea5c2ed2e8c820965d7ff138db25d0fb0baaa894ad8"
+  }
+ ],
+ "provenance": "Retail FileDataIDs model 117170, skin 469848; converter recipe tools/skinned-converter/recipes/bloodelfmale.json; pinned skinned_step.py. Output cost: 6863 verts, 8491 tris, 117 bones, 342 sequences; vs native None.",
+ "limits": [
+  "Particles, ribbons, lights, modern shader combiners and camera animation are dropped (see the report).",
+  "Replaces the model for every display that uses it; native skin names are reused for the modern skins.",
+  "Character pilot (W11): TBC-era character/bloodelf/male/bloodelfmale.m2 (FileDataID 117170, byte-identical in Forever and Retail; Retail is read because Forever has the eye-glow BLP offline) -> native Character/BloodElf/Male/BloodElfMale.m2. Every geoset the native character logic knows is kept (hair 1-17, facial 102-110, gloves, boots, ears, sleeves, kneepads, chest, pants, tabard, robe, cloaks 1501-1506) plus eye glow 1702; dropped: 1104, cloaks 1507-1510 (modern customization textures 15-18), DK eye glow 1703, belt 1802. Body/hair/cape stay replaceable (types 1/6/2) for the game's compositor and CharSections."
+ ]
+}

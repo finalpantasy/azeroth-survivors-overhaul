@@ -1,0 +1,28 @@
+{
+  "name": "Succubus",
+  "note": "Succubus (CreatureModelData 37) -> creature/succubus2/succubus2.m2 (one LOD), decimated.",
+  "source": {
+    "profile": "forever",
+    "model": 1380189,
+    "lod": 0
+  },
+  "native_model_path": "Creature/Succubus/Succubus.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Succubus/SuccubusNewSkin.blp": 1380282,
+        "Creature/Succubus/SuccubusNewSkinBlue.blp": 1380283,
+        "Creature/Succubus/SuccubusNewSkinMagenta.blp": 1380284,
+        "Creature/Succubus/SuccubusNewSkinRed.blp": 1380285
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 3790
+  }
+}

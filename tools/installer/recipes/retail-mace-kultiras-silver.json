@@ -1,0 +1,187 @@
+{
+ "schema": "as-recipe/1",
+ "id": "retail-mace-kultiras-silver",
+ "version": "1.0.0",
+ "title": "Retail silver Kul Tiras mace on starter display 5194",
+ "description": "Exports one Retail 12.1.5.70448 mace (4 files) from your own WoW install, converts it to the game's MD20 v256 rigid model, and points ItemDisplayInfo row 5194 (the shared native starter mace) at it. Cosmetic only; no item stats change.",
+ "status": "ready",
+ "default": true,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "524e83499dd8f216fadddf75c57346d03dcecb0b456b1f07f87eb6b109c35a1b",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "rigid-converter",
+   "mpq-packer"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "retail": {
+   "kind": "casc",
+   "product": "wow",
+   "version": "12.1.5.70448",
+   "build_number": 70448,
+   "build_key": "88d5e8ef05ec5a8446cdec93d142d7c6",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 87836,
+    "sha256": "f80e4cb45b64a3e00f94db5b6eafc45dfdd03b0734282c1369bcff9443062ba1"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 1693135,
+     "name": "model-1693135.m2",
+     "role": "model",
+     "bytes": 83984,
+     "sha256": "b8c956910942e5e4cc577ea1ddd92e29bba39ca79a3d65476796a950a3263430"
+    },
+    {
+     "file_data_id": 1693139,
+     "name": "skin-1693139.skin",
+     "role": "first-nonzero-SFID-skin",
+     "bytes": 17808,
+     "sha256": "a1b1cb5882f84c94a34941153c2181e4950ab6d64794375db6f260e532140a2a"
+    },
+    {
+     "file_data_id": 144333,
+     "name": "texture-144333.blp",
+     "role": "direct-TXID-BLP",
+     "bytes": 3916,
+     "sha256": "b1bb3e5b572250e0d5f03a2c5cb8d3c10e25f6ff77fc2e1fe8be8ca6e6c2a835"
+    },
+    {
+     "file_data_id": 1733940,
+     "name": "texture-1733940.blp",
+     "role": "selected-type2-variant-BLP",
+     "bytes": 88580,
+     "sha256": "9c2f5b24dfe99d8ee7bc0233c825e0ae4f32abed04ca09ee9865b46970b0462b"
+    }
+   ],
+   "note": "explicitly selected Kultiras mace silver cosmetic; original item-ID mapping unverified"
+  },
+  "game-dbc": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "DBFilesClient\\ItemDisplayInfo.dbc",
+     "sha256": [
+      "6f37ca862dc632a11aaf86e0ba7b183aa7abaebb052549e6120aa9fa69dd9dee"
+     ],
+     "role": "official ItemDisplayInfo.dbc (v0.103.0 chain)"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "retail"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "rigid-converter",
+   "inputs": {
+    "src": "export"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Item/ObjectComponents/Weapon/KultirasQuestB01_Silver_Static.m2",
+     "sha256": "b69b55d092912005907d9190a3616160d0b2e4cf845d8eb8860354eefab8004d"
+    },
+    {
+     "path": "payload/Item/ObjectComponents/Weapon/KultirasQuestB01_Silver_Static.blp",
+     "sha256": "9c2f5b24dfe99d8ee7bc0233c825e0ae4f32abed04ca09ee9865b46970b0462b"
+    }
+   ]
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-dbc"
+  },
+  {
+   "id": "dbc",
+   "op": "dbc-edit",
+   "input": "base:DBFilesClient/ItemDisplayInfo.dbc",
+   "output": "DBFilesClient/ItemDisplayInfo.dbc",
+   "expect_input_sha256": "6f37ca862dc632a11aaf86e0ba7b183aa7abaebb052549e6120aa9fa69dd9dee",
+   "edits": [
+    {
+     "row_id": 5194,
+     "column": 1,
+     "type": "string",
+     "expect_before": "Mace_1H_Flanged_A_01.mdx",
+     "value": "KultirasQuestB01_Silver_Static.mdx"
+    }
+   ],
+   "expect_output_sha256": "8cad43d17eaea194dc299c481f6c9a80f4fc4d8f7da49691a83be2b1ae81e4f4"
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "DBFilesClient\\ItemDisplayInfo.dbc",
+    "from": "dbc:DBFilesClient/ItemDisplayInfo.dbc",
+    "sha256": "8cad43d17eaea194dc299c481f6c9a80f4fc4d8f7da49691a83be2b1ae81e4f4"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Item\\ObjectComponents\\Weapon\\KultirasQuestB01_Silver_Static.m2",
+    "from": "convert:payload/Item/ObjectComponents/Weapon/KultirasQuestB01_Silver_Static.m2",
+    "sha256": "b69b55d092912005907d9190a3616160d0b2e4cf845d8eb8860354eefab8004d"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Item\\ObjectComponents\\Weapon\\KultirasQuestB01_Silver_Static.blp",
+    "from": "convert:payload/Item/ObjectComponents/Weapon/KultirasQuestB01_Silver_Static.blp",
+    "sha256": "9c2f5b24dfe99d8ee7bc0233c825e0ae4f32abed04ca09ee9865b46970b0462b"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "dbc-cell",
+   "slot": "patch-0.MPQ",
+   "path": "DBFilesClient\\ItemDisplayInfo.dbc",
+   "row_id": 5194,
+   "column": 1,
+   "type": "string",
+   "equals": "KultirasQuestB01_Silver_Static.mdx"
+  },
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Item\\ObjectComponents\\Weapon\\KultirasQuestB01_Silver_Static.m2",
+   "sha256": "b69b55d092912005907d9190a3616160d0b2e4cf845d8eb8860354eefab8004d"
+  }
+ ],
+ "provenance": "Retail 12.1.5.70448 FileDataIDs 1693135 (model), 1693139 (skin), 144333 and 1733940 (textures); pinned rigid converter; evidence analysis/retail-item-equip, analysis/local-recipe-verified.",
+ "limits": [
+  "Display 5194 is shared by native starter appearances (Shaman/Priest and others); the cosmetic changes all of them.",
+  "Item-ID mapping to the Retail item is not reproduced; only the native display row is changed.",
+  "Static rigid model: no animation tracks beyond the neutral sequence."
+ ]
+}

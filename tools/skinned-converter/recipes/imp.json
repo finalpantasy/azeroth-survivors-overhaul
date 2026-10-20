@@ -1,0 +1,24 @@
+{
+  "name": "Imp",
+  "note": "Warlock imp (CreatureModelData 371) -> Forever creature/imp2/imp2.m2 LOD 3.",
+  "source": {
+    "profile": "forever",
+    "model": 1098889,
+    "lod": 3
+  },
+  "native_model_path": "Creature/Imp/Imp.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Imp/ImpSkinBlack.blp": 1101612,
+        "Creature/Imp/ImpSkinJade.blp": 1101614,
+        "Creature/Imp/ImpSkinRed.blp": 1248112
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true
+}

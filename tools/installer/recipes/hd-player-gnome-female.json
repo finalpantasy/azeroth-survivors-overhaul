@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-gnome-female",
+  "version": "0.0.1",
+  "title": "HD player body: Gnome female (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Gnome female player model (display 1564) with a community HD body via private CreatureModelData row 2379, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Gnome/Female/GnomeFemale.m2 sha256 31d076d7036d52591fe7e435bc176ad3b73d93b8a7b6e864e7bc7b30b30a68b8. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Gnome\\Female\\GnomeFemaleHD.m2; repaired M2 sha256 2e2dc7f2b04950a7efb879db7ccf30a374175aa04a0a5163122b1f0109413125, staged (vertex-trimmed) sha256 8ea1ce9f93d929d0278d01b46903172f0d25b2d1447f8c847e45ed7b99edb1e0; 110 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

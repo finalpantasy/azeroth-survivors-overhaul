@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-orc-male",
+  "version": "0.0.1",
+  "title": "HD player body: Orc male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Orc male player model (display 51) with a community HD body via private CreatureModelData row 2368, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Orc/Male/orcmale.m2 sha256 47e72fa508b2206f32a8cb3bad2b9b76b0dc4eb6bfee6fa0abc6c4eba7e53db8. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Orc\\Male\\OrcMaleHD.m2; repaired M2 sha256 0fb555d13ad7ace1c71cf4e5d4fa0f055dfda24dbb0dde4752748a1d523a64a3, staged (vertex-trimmed) sha256 096c4399adab7cfc07c96031e2d88d5e23a039f2f5ee2ec5e2f12c6755bf02c0; 248 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

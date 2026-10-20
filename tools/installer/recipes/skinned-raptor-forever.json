@@ -1,0 +1,300 @@
+{
+ "schema": "as-recipe/1",
+ "id": "skinned-raptor-forever",
+ "version": "0.1.0",
+ "title": "Animated Forever Raptor model (Creature\\Raptor\\Raptor.m2)",
+ "description": "Exports the Classic (Forever 1.60.1.70245) raptor model, its LOD 2 skin, animations and skins from your own client and converts them to the game's animated MD20 v256 model at Creature\\Raptor\\Raptor.m2, replacing the native model for every creature that uses it.",
+ "status": "experimental",
+ "default": false,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "skinned-converter"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "forever": {
+   "kind": "casc",
+   "product": "wowf",
+   "version": "1.60.1.70245",
+   "build_number": 70245,
+   "build_key": "e8c4ef4e67bd1d94d820254984258fa8",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 83760,
+    "sha256": "29237f0d511842f1d126cdc27989a74593b854ff424061b039c191dcc6ad306c"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 1043712,
+     "name": "1043712.bin",
+     "bytes": 1590628,
+     "sha256": "6cdabd67b9ccfe020dd8b774656bf3e0238699f1a2eddb1b64dce624f8e0b825",
+     "role": "model"
+    },
+    {
+     "file_data_id": 1043751,
+     "name": "1043751.bin",
+     "bytes": 350724,
+     "sha256": "9727d1d946b7da7f859af8a2cd86e353e7bced8e0a04a213ec7a625b4d09426f",
+     "role": "BLP for Creature\\Raptor\\RaptorSkinOrange.blp"
+    },
+    {
+     "file_data_id": 1043752,
+     "name": "1043752.bin",
+     "bytes": 1868,
+     "sha256": "ff8db5fbdd2e07e1f4b4aca767aa29822921bed65384707b79f28c9edd1b4276",
+     "role": "BLP for Creature\\Raptor\\Raptor2_OrbReflect.blp"
+    },
+    {
+     "file_data_id": 1043753,
+     "name": "1043753.bin",
+     "bytes": 19616,
+     "sha256": "9e3c6ddaaf3b56f5990a46dc7140a5779ce1765c11a23c1d2f3e5605e34dcab7",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 1043770,
+     "name": "1043770.bin",
+     "bytes": 350724,
+     "sha256": "7d04edfa44b2b12998f436bda884e71d0a1008aa92eedf9917131f4a7efcd17f",
+     "role": "BLP for Creature\\Raptor\\RaptorSkinMottledBlueGreen.blp"
+    },
+    {
+     "file_data_id": 1043771,
+     "name": "1043771.bin",
+     "bytes": 350724,
+     "sha256": "b155023d7b82d7d28433d8d511f4a71938d81b935b29260e12b746da127c60ee",
+     "role": "BLP for Creature\\Raptor\\RaptorSkinGrey.blp"
+    },
+    {
+     "file_data_id": 1043773,
+     "name": "1043773.bin",
+     "bytes": 350724,
+     "sha256": "54a0fc1f637d6ac7f47a6b54ec1c0af164c6689f8522a20b1ed6a0356f4c5d4b",
+     "role": "BLP for Creature\\Raptor\\RaptorSkinYellow.blp"
+    },
+    {
+     "file_data_id": 1852060,
+     "name": "1852060.bin",
+     "bytes": 242024,
+     "sha256": "61eee5aed4f99468b3a82f31a3188d000a04b241d5a93602751a4f5b417a46cb",
+     "role": "external .anim 61.0"
+    },
+    {
+     "file_data_id": 1852061,
+     "name": "1852061.bin",
+     "bytes": 20296,
+     "sha256": "c8eb75c718a53e4145fb7c881132bf3fbd7a4291f26620c5026f4f97adcf0f9c",
+     "role": "external .anim 97.0"
+    },
+    {
+     "file_data_id": 1852062,
+     "name": "1852062.bin",
+     "bytes": 20184,
+     "sha256": "8a188ae7dafb5e376a90d75ce00087a265ee4103ae416a6803c85e4d5e3cc5c1",
+     "role": "external .anim 96.0"
+    },
+    {
+     "file_data_id": 1852063,
+     "name": "1852063.bin",
+     "bytes": 19784,
+     "sha256": "f3b80db1ed93d12439574c5c7529ab6cb3113e54112dee60b8247e4fef17195e",
+     "role": "external .anim 98.0"
+    },
+    {
+     "file_data_id": 2991673,
+     "name": "2991673.bin",
+     "bytes": 32664,
+     "sha256": "c31371587fbb4ac94d60cf3d22390758bcc8040bbe72951da3d6e72e3774f17d",
+     "role": "external .anim 69.0"
+    },
+    {
+     "file_data_id": 3761881,
+     "name": "3761881.bin",
+     "bytes": 12624,
+     "sha256": "d71eefa92cb08222d2d42b5048325887922200b70415d82fa3cec1722714d62e",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 3761882,
+     "name": "3761882.bin",
+     "bytes": 8816,
+     "sha256": "55d21248936d0fb1db740c883c1f95fcd177525fc6415c43f9fcd1d9688d9218",
+     "role": "skin LOD 2"
+    }
+   ]
+  },
+  "game-base": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "Creature\\Raptor\\Raptor.m2",
+     "sha256": [
+      "ca9ab66b3fc9d80c7367a67c4689afffa0d374da9dd2bc06d6afa26a5c7a63ee"
+     ],
+     "role": "native model being replaced (PlayableAnimationLookup template); from patch.MPQ"
+    },
+    {
+     "path": "DBFilesClient\\AnimationData.dbc",
+     "sha256": [
+      "990ebbcb611814c8996e67214224c52775a5f5e09e98fadc187da981f060130d"
+     ],
+     "role": "official AnimationData.dbc (fallback chain); from patch.MPQ"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "forever"
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-base"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "skinned-converter",
+   "inputs": {
+    "src": "export",
+    "base": "base"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Creature/Raptor/Raptor.m2",
+     "sha256": "395fa14cba33b8beb082bcdf957cb8dcec9154683ce471e5568b6068cdf476eb"
+    },
+    {
+     "path": "payload/Creature/Raptor/Raptor2_OrbReflect.blp",
+     "sha256": "ff8db5fbdd2e07e1f4b4aca767aa29822921bed65384707b79f28c9edd1b4276"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinGrey.blp",
+     "sha256": "b155023d7b82d7d28433d8d511f4a71938d81b935b29260e12b746da127c60ee"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinMottledBlueGreen.blp",
+     "sha256": "7d04edfa44b2b12998f436bda884e71d0a1008aa92eedf9917131f4a7efcd17f"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinMottledDarkGreen.blp",
+     "sha256": "b155023d7b82d7d28433d8d511f4a71938d81b935b29260e12b746da127c60ee"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinOrange.blp",
+     "sha256": "9727d1d946b7da7f859af8a2cd86e353e7bced8e0a04a213ec7a625b4d09426f"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinRed.blp",
+     "sha256": "9727d1d946b7da7f859af8a2cd86e353e7bced8e0a04a213ec7a625b4d09426f"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinViolet.blp",
+     "sha256": "7d04edfa44b2b12998f436bda884e71d0a1008aa92eedf9917131f4a7efcd17f"
+    },
+    {
+     "path": "payload/Creature/Raptor/RaptorSkinYellow.blp",
+     "sha256": "54a0fc1f637d6ac7f47a6b54ec1c0af164c6689f8522a20b1ed6a0356f4c5d4b"
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\Raptor.m2",
+    "from": "convert:payload/Creature/Raptor/Raptor.m2",
+    "sha256": "395fa14cba33b8beb082bcdf957cb8dcec9154683ce471e5568b6068cdf476eb"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\Raptor2_OrbReflect.blp",
+    "from": "convert:payload/Creature/Raptor/Raptor2_OrbReflect.blp",
+    "sha256": "ff8db5fbdd2e07e1f4b4aca767aa29822921bed65384707b79f28c9edd1b4276"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinGrey.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinGrey.blp",
+    "sha256": "b155023d7b82d7d28433d8d511f4a71938d81b935b29260e12b746da127c60ee"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinMottledBlueGreen.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinMottledBlueGreen.blp",
+    "sha256": "7d04edfa44b2b12998f436bda884e71d0a1008aa92eedf9917131f4a7efcd17f"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinMottledDarkGreen.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinMottledDarkGreen.blp",
+    "sha256": "b155023d7b82d7d28433d8d511f4a71938d81b935b29260e12b746da127c60ee"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinOrange.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinOrange.blp",
+    "sha256": "9727d1d946b7da7f859af8a2cd86e353e7bced8e0a04a213ec7a625b4d09426f"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinRed.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinRed.blp",
+    "sha256": "9727d1d946b7da7f859af8a2cd86e353e7bced8e0a04a213ec7a625b4d09426f"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinViolet.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinViolet.blp",
+    "sha256": "7d04edfa44b2b12998f436bda884e71d0a1008aa92eedf9917131f4a7efcd17f"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Raptor\\RaptorSkinYellow.blp",
+    "from": "convert:payload/Creature/Raptor/RaptorSkinYellow.blp",
+    "sha256": "54a0fc1f637d6ac7f47a6b54ec1c0af164c6689f8522a20b1ed6a0356f4c5d4b"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Creature\\Raptor\\Raptor.m2",
+   "sha256": "395fa14cba33b8beb082bcdf957cb8dcec9154683ce471e5568b6068cdf476eb"
+  }
+ ],
+ "provenance": "Forever FileDataIDs model 1043712, skin 3761882; converter recipe tools/skinned-converter/recipes/raptor.json; pinned skinned_step.py. Output cost: 634 verts, 804 tris, 83 bones, 51 sequences; vs native {'vertices': 1.15, 'triangles': 1.2, 'bones': 1.43}.",
+ "limits": [
+  "Particles, ribbons, lights, modern shader combiners and camera animation are dropped (see the report).",
+  "Replaces the model for every display that uses it; native skin names are reused for the modern skins.",
+  "Un'Goro Ravasaurs / raptors: native Creature/Raptor/Raptor.m2 (CreatureModelData 34) -> Forever creature/raptor2/raptor2.m2. Native displays use RaptorSkin<Color> (type 11); nearest modern colors: Grey->darkgreen, MottledBlueGreen->blue, MottledDarkGreen->darkgreen, Orange->red, Violet->blue, Yellow->yellow, Red->red."
+ ]
+}

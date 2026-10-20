@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-gnome-male",
+  "version": "0.0.1",
+  "title": "HD player body: Gnome male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Gnome male player model (display 1563) with a community HD body via private CreatureModelData row 2378, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Gnome/Male/GnomeMale.m2 sha256 9d57087d89a9be8904963716079c4dbde88fe49345afc9f6d388217490d4852f. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Gnome\\Male\\GnomeMaleHD.m2; repaired M2 sha256 762d785a650d94c6afac6e46701bea1571a90adf86d0cd80c260b44650913287, staged (vertex-trimmed) sha256 7dcabe117f3185c3e6049370c8b39c9102dfb2dda6606a873c8a599a9a8fd634; 182 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

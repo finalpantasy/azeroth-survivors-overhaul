@@ -1,0 +1,16 @@
+{
+  "schema": "as-profile/1",
+  "id": "current-upgrade",
+  "version": "1.0.0",
+  "title": "Current installed upgrade (HD terrain, spell visuals, Retail silver mace)",
+  "description": "Reproduces what is installed in the main game today: terrain in patch-1, spells and the mace in patch-0.",
+  "recipes": [
+    "hd-terrain-community",
+    "hd-spells-community",
+    "retail-mace-kultiras-silver"
+  ],
+  "allow_experimental": false,
+  "expect_slot_sha256": {
+    "patch-0.MPQ": "144d9b4274086657f0e0e6f3307956237d7c7c97c0c71a53e30c914c82dc2e95"
+  }
+}

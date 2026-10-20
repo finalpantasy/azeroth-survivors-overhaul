@@ -1,0 +1,22 @@
+{
+  "name": "VoidWalker",
+  "note": "Voidwalker (CreatureModelData 162) -> creature/voidwalker2/voidwalker2.m2 LOD 5.",
+  "source": {
+    "profile": "forever",
+    "model": 1410363,
+    "lod": 5
+  },
+  "native_model_path": "Creature/VoidWalker/VoidWalker.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/VoidWalker/VoidWalkerSkin.blp": 1410411
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true
+}

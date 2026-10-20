@@ -1,0 +1,299 @@
+{
+ "schema": "as-recipe/1",
+ "id": "skinned-golemharvest-retail",
+ "version": "0.1.0",
+ "title": "Animated Retail GolemHarvest model (Creature\\GolemHarvest\\GolemHarvest.m2)",
+ "description": "Exports the Retail (12.1.5.70448) golemharvest model, its LOD 0 skin, animations and skins from your own client and converts them to the game's animated MD20 v256 model at Creature\\GolemHarvest\\GolemHarvest.m2, replacing the native model for every creature that uses it.",
+ "status": "experimental",
+ "default": false,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "skinned-converter"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "retail": {
+   "kind": "casc",
+   "product": "wow",
+   "version": "12.1.5.70448",
+   "build_number": 70448,
+   "build_key": "88d5e8ef05ec5a8446cdec93d142d7c6",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 87836,
+    "sha256": "f80e4cb45b64a3e00f94db5b6eafc45dfdd03b0734282c1369bcff9443062ba1"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 124235,
+     "name": "124235.bin",
+     "bytes": 137940,
+     "sha256": "d71e11890b09c81f4ac0dd15d0a5c3681a26f86f880166cfaba09e9d2df28070",
+     "role": "model"
+    },
+    {
+     "file_data_id": 124236,
+     "name": "124236.bin",
+     "bytes": 12108,
+     "sha256": "cf701a006d1216281a47e847713823812c3507fff1768cff4676d751e6e5945b",
+     "role": "BLP for Creature\\GolemHarvest\\HarvestGolemBitsBlue.blp"
+    },
+    {
+     "file_data_id": 124237,
+     "name": "124237.bin",
+     "bytes": 23044,
+     "sha256": "75a6f9c6a4123a1e1f98790a04c43e0f12d8296212705800e9b39afe5c986c79",
+     "role": "BLP for Creature\\GolemHarvest\\HarvestGolemBitsBrown.blp"
+    },
+    {
+     "file_data_id": 124238,
+     "name": "124238.bin",
+     "bytes": 12108,
+     "sha256": "1766b8ff8068ea410d6b16c84a5cba13acd1fdbe0ac066bfde4509c0871cbf28",
+     "role": "BLP for Creature\\GolemHarvest\\HarvestGolemBitsGrey.blp"
+    },
+    {
+     "file_data_id": 124239,
+     "name": "124239.bin",
+     "bytes": 44876,
+     "sha256": "73e090375ca45802bd2e9d18e30c41c6e636c8bfd95345ffc1e9d3822a244adf",
+     "role": "BLP for Creature\\GolemHarvest\\HarvestGolemSkinBlue.blp"
+    },
+    {
+     "file_data_id": 124240,
+     "name": "124240.bin",
+     "bytes": 44876,
+     "sha256": "80b2c4af65c6b4a057fd5a96e962dc56fc393054e84519c946b56075c7159938",
+     "role": "BLP for Creature\\GolemHarvest\\HarvestGolemSkinBrown.blp"
+    },
+    {
+     "file_data_id": 124241,
+     "name": "124241.bin",
+     "bytes": 44876,
+     "sha256": "5282427341f56437a9f76a8f7f1ad4bd2b95d57f64497ee8c35174419e22db8e",
+     "role": "BLP for Creature\\GolemHarvest\\HarvestGolemSkinGrey.blp"
+    },
+    {
+     "file_data_id": 124242,
+     "name": "124242.bin",
+     "bytes": 2564,
+     "sha256": "ac416630eba337c34616f5f0b3df0b2da234fc70863560fc8bc58c02bc05f52d",
+     "role": "BLP for Creature\\GolemHarvest\\red_glow3.blp"
+    },
+    {
+     "file_data_id": 476181,
+     "name": "476181.bin",
+     "bytes": 9664,
+     "sha256": "25f3bceb60053e62b03c29230a29774034aefe10d3ea02851ba102aa9f98ec42",
+     "role": "skin LOD 0"
+    },
+    {
+     "file_data_id": 2023310,
+     "name": "2023310.bin",
+     "bytes": 2564,
+     "sha256": "6b8e4edc44e11cad25dc68ecebe7c7ba7028b874c33d15bdae0ca5551675c230",
+     "role": "BLP for Creature\\GolemHarvest\\GolemHarvest_tex3.blp"
+    },
+    {
+     "file_data_id": 2023312,
+     "name": "2023312.bin",
+     "bytes": 1540,
+     "sha256": "f245efcd8ba11cec97c7fdbb4330a1fc36ed029686773d28709ba31b766dcfd2",
+     "role": "BLP for Creature\\GolemHarvest\\GolemHarvest_tex4.blp"
+    },
+    {
+     "file_data_id": 2023314,
+     "name": "2023314.bin",
+     "bytes": 1540,
+     "sha256": "f2ecaa3d47fc455148e57154dadd1d6324c5d31136b70172c94a7c1418dde08e",
+     "role": "BLP for Creature\\GolemHarvest\\GolemHarvest_tex5.blp"
+    }
+   ]
+  },
+  "game-base": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "DBFilesClient\\AnimationData.dbc",
+     "sha256": [
+      "990ebbcb611814c8996e67214224c52775a5f5e09e98fadc187da981f060130d"
+     ],
+     "role": "official AnimationData.dbc (fallback chain); from patch.MPQ"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "retail"
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-base"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "skinned-converter",
+   "inputs": {
+    "src": "export",
+    "base": "base"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Creature/GolemHarvest/GolemHarvest.m2",
+     "sha256": "310d6be4fda1473a4f7ee77733b2e2dca207e7109ad84a8567cb3d23965f3877"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/GolemHarvest_tex3.blp",
+     "sha256": "6b8e4edc44e11cad25dc68ecebe7c7ba7028b874c33d15bdae0ca5551675c230"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/GolemHarvest_tex4.blp",
+     "sha256": "f245efcd8ba11cec97c7fdbb4330a1fc36ed029686773d28709ba31b766dcfd2"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/GolemHarvest_tex5.blp",
+     "sha256": "f2ecaa3d47fc455148e57154dadd1d6324c5d31136b70172c94a7c1418dde08e"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/HarvestGolemBitsBlue.blp",
+     "sha256": "cf701a006d1216281a47e847713823812c3507fff1768cff4676d751e6e5945b"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/HarvestGolemBitsBrown.blp",
+     "sha256": "75a6f9c6a4123a1e1f98790a04c43e0f12d8296212705800e9b39afe5c986c79"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/HarvestGolemBitsGrey.blp",
+     "sha256": "1766b8ff8068ea410d6b16c84a5cba13acd1fdbe0ac066bfde4509c0871cbf28"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/HarvestGolemSkinBlue.blp",
+     "sha256": "73e090375ca45802bd2e9d18e30c41c6e636c8bfd95345ffc1e9d3822a244adf"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/HarvestGolemSkinBrown.blp",
+     "sha256": "80b2c4af65c6b4a057fd5a96e962dc56fc393054e84519c946b56075c7159938"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/HarvestGolemSkinGrey.blp",
+     "sha256": "5282427341f56437a9f76a8f7f1ad4bd2b95d57f64497ee8c35174419e22db8e"
+    },
+    {
+     "path": "payload/Creature/GolemHarvest/red_glow3.blp",
+     "sha256": "ac416630eba337c34616f5f0b3df0b2da234fc70863560fc8bc58c02bc05f52d"
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\GolemHarvest.m2",
+    "from": "convert:payload/Creature/GolemHarvest/GolemHarvest.m2",
+    "sha256": "310d6be4fda1473a4f7ee77733b2e2dca207e7109ad84a8567cb3d23965f3877"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\GolemHarvest_tex3.blp",
+    "from": "convert:payload/Creature/GolemHarvest/GolemHarvest_tex3.blp",
+    "sha256": "6b8e4edc44e11cad25dc68ecebe7c7ba7028b874c33d15bdae0ca5551675c230"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\GolemHarvest_tex4.blp",
+    "from": "convert:payload/Creature/GolemHarvest/GolemHarvest_tex4.blp",
+    "sha256": "f245efcd8ba11cec97c7fdbb4330a1fc36ed029686773d28709ba31b766dcfd2"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\GolemHarvest_tex5.blp",
+    "from": "convert:payload/Creature/GolemHarvest/GolemHarvest_tex5.blp",
+    "sha256": "f2ecaa3d47fc455148e57154dadd1d6324c5d31136b70172c94a7c1418dde08e"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\HarvestGolemBitsBlue.blp",
+    "from": "convert:payload/Creature/GolemHarvest/HarvestGolemBitsBlue.blp",
+    "sha256": "cf701a006d1216281a47e847713823812c3507fff1768cff4676d751e6e5945b"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\HarvestGolemBitsBrown.blp",
+    "from": "convert:payload/Creature/GolemHarvest/HarvestGolemBitsBrown.blp",
+    "sha256": "75a6f9c6a4123a1e1f98790a04c43e0f12d8296212705800e9b39afe5c986c79"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\HarvestGolemBitsGrey.blp",
+    "from": "convert:payload/Creature/GolemHarvest/HarvestGolemBitsGrey.blp",
+    "sha256": "1766b8ff8068ea410d6b16c84a5cba13acd1fdbe0ac066bfde4509c0871cbf28"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\HarvestGolemSkinBlue.blp",
+    "from": "convert:payload/Creature/GolemHarvest/HarvestGolemSkinBlue.blp",
+    "sha256": "73e090375ca45802bd2e9d18e30c41c6e636c8bfd95345ffc1e9d3822a244adf"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\HarvestGolemSkinBrown.blp",
+    "from": "convert:payload/Creature/GolemHarvest/HarvestGolemSkinBrown.blp",
+    "sha256": "80b2c4af65c6b4a057fd5a96e962dc56fc393054e84519c946b56075c7159938"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\HarvestGolemSkinGrey.blp",
+    "from": "convert:payload/Creature/GolemHarvest/HarvestGolemSkinGrey.blp",
+    "sha256": "5282427341f56437a9f76a8f7f1ad4bd2b95d57f64497ee8c35174419e22db8e"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\GolemHarvest\\red_glow3.blp",
+    "from": "convert:payload/Creature/GolemHarvest/red_glow3.blp",
+    "sha256": "ac416630eba337c34616f5f0b3df0b2da234fc70863560fc8bc58c02bc05f52d"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Creature\\GolemHarvest\\GolemHarvest.m2",
+   "sha256": "310d6be4fda1473a4f7ee77733b2e2dca207e7109ad84a8567cb3d23965f3877"
+  }
+ ],
+ "provenance": "Retail FileDataIDs model 124235, skin 476181; converter recipe tools/skinned-converter/recipes/golemharvest.json; pinned skinned_step.py. Output cost: 772 verts, 760 tris, 43 bones, 13 sequences; vs native None.",
+ "limits": [
+  "Particles, ribbons, lights, modern shader combiners and camera animation are dropped (see the report).",
+  "Replaces the model for every display that uses it; native skin names are reused for the modern skins.",
+  "Harvest golem (Westfall; CreatureModelData 71, displays 71/367/378/379/514/548/1150). The native model is missing from the data, so there is no template; creature/golemharvest/golemharvest.m2 (FileDataID 124235, byte-identical in Forever and Retail) is the classic geometry. Its BLPs are offline in the local Forever client (CascLib 4350), so the recipe reads Retail. Displays use HarvestGolemSkin<Color> (type 11, variation 0) and HarvestGolemBits<Color> (type 12, variation 1)."
+ ]
+}

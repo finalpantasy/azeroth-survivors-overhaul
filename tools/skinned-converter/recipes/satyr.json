@@ -1,0 +1,30 @@
+{
+  "name": "Satyr",
+  "note": "Satyr (CreatureModelData 78, Kazzak event) -> creature/satyr2/satyr2.m2 LOD 3.",
+  "source": {
+    "profile": "forever",
+    "model": 1133999,
+    "lod": 3
+  },
+  "native_model_path": "Creature/Satyr/Satyr.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Satyr/SatyrSkinAlbino.blp": 1134101,
+        "Creature/Satyr/SatyrSkinBlue.blp": 1134102,
+        "Creature/Satyr/SatyrSkinCrimson.blp": 1134103,
+        "Creature/Satyr/SatyrSkinGreen.blp": 1134104,
+        "Creature/Satyr/SatyrSkinPink.blp": 1134105,
+        "Creature/Satyr/SatyrSkinRed.blp": 1134106,
+        "Creature/Satyr/SatyrSkinTurquoise.blp": 1134107,
+        "Creature/Satyr/SatyrSkinViolet.blp": 1134108,
+        "Creature/Satyr/SatyrSkinYellow.blp": 1134109
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true
+}

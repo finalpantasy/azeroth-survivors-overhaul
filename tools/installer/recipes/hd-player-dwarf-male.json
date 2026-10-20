@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-dwarf-male",
+  "version": "0.0.1",
+  "title": "HD player body: Dwarf male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Dwarf male player model (display 53) with a community HD body via private CreatureModelData row 2370, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Dwarf/Male/DwarfMale.m2 sha256 ca07bf769bcff56ee73db8b8e1fc83070184104673ae1bb660f05705350dff2e. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Dwarf\\Male\\DwarfMaleHD.m2; repaired M2 sha256 81dd3ccabbb1978f1c882b80d723fa42af58509b3d0f2f719ef1d6f619ef6113, staged (vertex-trimmed) sha256 27a4e2ec16a9ae0715568bbce7203a1d46575fdc0ec8a3c4385d6f7c9e152bae; 338 CharSections rows, 0 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

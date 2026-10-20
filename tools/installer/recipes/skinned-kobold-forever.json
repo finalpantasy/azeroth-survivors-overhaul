@@ -1,0 +1,201 @@
+{
+ "schema": "as-recipe/1",
+ "id": "skinned-kobold-forever",
+ "version": "0.1.0",
+ "title": "Animated Forever Kobold model (Creature\\Kobold\\Kobold.m2)",
+ "description": "Exports the Classic (Forever 1.60.1.70245) kobold model, its LOD 0 skin, animations and skins from your own client and converts them to the game's animated MD20 v256 model at Creature\\Kobold\\Kobold.m2, replacing the native model for every creature that uses it.",
+ "status": "experimental",
+ "default": false,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "skinned-converter"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "forever": {
+   "kind": "casc",
+   "product": "wowf",
+   "version": "1.60.1.70245",
+   "build_number": 70245,
+   "build_key": "e8c4ef4e67bd1d94d820254984258fa8",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 83760,
+    "sha256": "29237f0d511842f1d126cdc27989a74593b854ff424061b039c191dcc6ad306c"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 1139464,
+     "name": "1139464.bin",
+     "bytes": 319616,
+     "sha256": "eaf2c49131538375367908038d3951e3d56963bcb7a3e99461d9c951c24e9357",
+     "role": "model"
+    },
+    {
+     "file_data_id": 1139469,
+     "name": "1139469.bin",
+     "bytes": 15456,
+     "sha256": "ff743ffecead06da56f71af06f70bf2e6a7ac7ac8ddd4b54c4ad94af08590001",
+     "role": "external .anim 62.0"
+    },
+    {
+     "file_data_id": 1139470,
+     "name": "1139470.bin",
+     "bytes": 16032,
+     "sha256": "f2659fa7efc6dde12adea694d8be6e785bd2e588fa5432e313588da784b2efa5",
+     "role": "external .anim 62.1"
+    },
+    {
+     "file_data_id": 1139472,
+     "name": "1139472.bin",
+     "bytes": 47440,
+     "sha256": "5624b23ec111f64cecb64fbb81c40bf9f2fc0465e720d1db3655f43d5a2347e8",
+     "role": "skin LOD 0"
+    },
+    {
+     "file_data_id": 1139484,
+     "name": "1139484.bin",
+     "bytes": 350724,
+     "sha256": "31040243bbf3ebb3ca960bdd57341be3a068714cb4d229a46380d3bacf97b20e",
+     "role": "BLP for Creature\\Kobold\\KoboldSkinAlbino.blp"
+    },
+    {
+     "file_data_id": 1139485,
+     "name": "1139485.bin",
+     "bytes": 350724,
+     "sha256": "fc8d74945de4b5ba44eca0af85988f36a8445db0db914519868e444ae4f345d3",
+     "role": "BLP for Creature\\Kobold\\Kobold2_Hat01.blp"
+    },
+    {
+     "file_data_id": 1139486,
+     "name": "1139486.bin",
+     "bytes": 350724,
+     "sha256": "f6ca3a7d299792485f413abb4ed4f6ae5febb02e4d579b8011e3946f2bd47331",
+     "role": "BLP for Creature\\Kobold\\KoboldSkinNormal.blp"
+    }
+   ]
+  },
+  "game-base": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "Creature\\Kobold\\Kobold.m2",
+     "sha256": [
+      "1d2fa651997e7ef8f2a51ecf354bf33851a05cb4229afd4414d93c453e8080c4"
+     ],
+     "role": "native model being replaced (PlayableAnimationLookup template); from patch.MPQ"
+    },
+    {
+     "path": "DBFilesClient\\AnimationData.dbc",
+     "sha256": [
+      "990ebbcb611814c8996e67214224c52775a5f5e09e98fadc187da981f060130d"
+     ],
+     "role": "official AnimationData.dbc (fallback chain); from patch.MPQ"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "forever"
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-base"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "skinned-converter",
+   "inputs": {
+    "src": "export",
+    "base": "base"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Creature/Kobold/Kobold.m2",
+     "sha256": "1f91b454de057b019fe0aac6b55f7e5b504586970266e3edc6b068e40b002068"
+    },
+    {
+     "path": "payload/Creature/Kobold/Kobold2_Hat01.blp",
+     "sha256": "fc8d74945de4b5ba44eca0af85988f36a8445db0db914519868e444ae4f345d3"
+    },
+    {
+     "path": "payload/Creature/Kobold/KoboldSkinAlbino.blp",
+     "sha256": "31040243bbf3ebb3ca960bdd57341be3a068714cb4d229a46380d3bacf97b20e"
+    },
+    {
+     "path": "payload/Creature/Kobold/KoboldSkinNormal.blp",
+     "sha256": "f6ca3a7d299792485f413abb4ed4f6ae5febb02e4d579b8011e3946f2bd47331"
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Kobold\\Kobold.m2",
+    "from": "convert:payload/Creature/Kobold/Kobold.m2",
+    "sha256": "1f91b454de057b019fe0aac6b55f7e5b504586970266e3edc6b068e40b002068"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Kobold\\Kobold2_Hat01.blp",
+    "from": "convert:payload/Creature/Kobold/Kobold2_Hat01.blp",
+    "sha256": "fc8d74945de4b5ba44eca0af85988f36a8445db0db914519868e444ae4f345d3"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Kobold\\KoboldSkinAlbino.blp",
+    "from": "convert:payload/Creature/Kobold/KoboldSkinAlbino.blp",
+    "sha256": "31040243bbf3ebb3ca960bdd57341be3a068714cb4d229a46380d3bacf97b20e"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Kobold\\KoboldSkinNormal.blp",
+    "from": "convert:payload/Creature/Kobold/KoboldSkinNormal.blp",
+    "sha256": "f6ca3a7d299792485f413abb4ed4f6ae5febb02e4d579b8011e3946f2bd47331"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Creature\\Kobold\\Kobold.m2",
+   "sha256": "1f91b454de057b019fe0aac6b55f7e5b504586970266e3edc6b068e40b002068"
+  }
+ ],
+ "provenance": "Forever FileDataIDs model 1139464, skin 1139472; converter recipe tools/skinned-converter/recipes/kobold.json; pinned skinned_step.py. Output cost: 949 verts, 1108 tris, 62 bones, 21 sequences; vs native {'vertices': 1.84, 'triangles': 1.96, 'bones': 0.86}.",
+ "limits": [
+  "Particles, ribbons, lights, modern shader combiners and camera animation are dropped (see the report).",
+  "Replaces the model for every display that uses it; native skin names are reused for the modern skins.",
+  "Kobold Vermin / Geomancer / Taskmaster (Elwynn): native Creature/Kobold/Kobold.m2 (CreatureModelData 26) -> Forever creature/kobold2/kobold2.m2. Native displays use KoboldSkinNormal / KoboldSkinAlbino (type 11), so the modern skins are published under those names and every display keeps its skin."
+ ]
+}

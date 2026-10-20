@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-tauren-female",
+  "version": "0.0.1",
+  "title": "HD player body: Tauren female (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Tauren female player model (display 60) with a community HD body via private CreatureModelData row 2377, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Tauren/Female/TaurenFemale.m2 sha256 33bdd242b4865dcf09612405d7505edbd9de53654d7ab2c7ac62c074c16464be. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Tauren\\Female\\TaurenFemaleHD.m2; repaired M2 sha256 efea7dd610c5b9b6f5abc1cac7d5ee52a0f3e8c9c59824214bfdaa274d2c771c, staged (vertex-trimmed) sha256 237991c180379c96c73b56d4161871a5abfe0ffbb09d01768efe79a834bab5cb; 92 CharSections rows, 10 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

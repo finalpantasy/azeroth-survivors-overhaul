@@ -1,0 +1,402 @@
+{
+ "schema": "as-recipe/1",
+ "id": "skinned-gnoll-forever",
+ "version": "0.1.0",
+ "title": "Animated Forever Gnoll model (Creature\\Gnoll\\gnoll.m2)",
+ "description": "Exports the Classic (Forever 1.60.1.70245) gnoll model, its LOD 7 skin, animations and skins from your own client and converts them to the game's animated MD20 v256 model at Creature\\Gnoll\\gnoll.m2, replacing the native model for every creature that uses it.",
+ "status": "experimental",
+ "default": false,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "skinned-converter"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "forever": {
+   "kind": "casc",
+   "product": "wowf",
+   "version": "1.60.1.70245",
+   "build_number": 70245,
+   "build_key": "e8c4ef4e67bd1d94d820254984258fa8",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 83760,
+    "sha256": "29237f0d511842f1d126cdc27989a74593b854ff424061b039c191dcc6ad306c"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 3886641,
+     "name": "3886641.bin",
+     "bytes": 6060020,
+     "sha256": "d7bd94fccd819dce6558022980a4044dffd966d92636be0adb0f8f32aea37602",
+     "role": "model"
+    },
+    {
+     "file_data_id": 3886645,
+     "name": "3886645.bin",
+     "bytes": 700260,
+     "sha256": "d3741cd30f454c3fb9db981390edc775be87b56a8036db3f5f5477a164f9ef22",
+     "role": "BLP for Creature\\Gnoll\\Gnoll2_ArmorBrown.blp"
+    },
+    {
+     "file_data_id": 3886649,
+     "name": "3886649.bin",
+     "bytes": 350724,
+     "sha256": "f67d999d6cb1e50fbabe6c6fb03102a05439e3f9f89f4a3b2efbb18980038f63",
+     "role": "BLP for Creature\\Gnoll\\RiverPawGnollWhelpSkin.blp"
+    },
+    {
+     "file_data_id": 3886650,
+     "name": "3886650.bin",
+     "bytes": 350724,
+     "sha256": "dabe310abaecb25c148ee7bef093a973bde0336325387cb7a817045b63c8089b",
+     "role": "BLP for Creature\\Gnoll\\ShadowHideGnollWhelpSkin.blp"
+    },
+    {
+     "file_data_id": 3886651,
+     "name": "3886651.bin",
+     "bytes": 350724,
+     "sha256": "82970e7b0f01d12560c04909bcbe636ca6cc919b91afc57bfcf486b105a0ce53",
+     "role": "BLP for Creature\\Gnoll\\RedRidgeGnollWhelpSkin.blp"
+    },
+    {
+     "file_data_id": 3886652,
+     "name": "3886652.bin",
+     "bytes": 350724,
+     "sha256": "556c3ccbfe415020b425c94c546946c30bd56d708b1128c631db196a15be29ef",
+     "role": "BLP for Creature\\Gnoll\\MossHideGnollWhelpSkin.blp"
+    },
+    {
+     "file_data_id": 3886653,
+     "name": "3886653.bin",
+     "bytes": 3916,
+     "sha256": "a261882074655f355eda14b6b67852a2a11b83f16ed294c56e0e277768815e1c",
+     "role": "BLP for Creature\\Gnoll\\Gnoll2_Reflect.blp"
+    },
+    {
+     "file_data_id": 3886655,
+     "name": "3886655.bin",
+     "bytes": 207200,
+     "sha256": "21d82681f1780546f6f94674c6a5211679142dcf3df8eaac7e78b9c97ca85720",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 3886657,
+     "name": "3886657.bin",
+     "bytes": 149152,
+     "sha256": "0fa77ce45d320cae358ba966afbc0ea41926e7d97bd2e20546c7675e6360b9c3",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 3886658,
+     "name": "3886658.bin",
+     "bytes": 116576,
+     "sha256": "a26d1663d1ebdb41ce9fe241163d6af2638247346f21ac44ee5e1c0d7f1cc6a3",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 3886659,
+     "name": "3886659.bin",
+     "bytes": 99632,
+     "sha256": "fd8443aec2183aac5ac133f5c3f4cd5323854c171f7d9a5e910b63bf62506e34",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 3887343,
+     "name": "3887343.bin",
+     "bytes": 350724,
+     "sha256": "1468766a9a087c2fbe3196e34d52575ed4bffcd4a73da9c40b03245cc4b87346",
+     "role": "BLP for Creature\\Gnoll\\RothideGnollWhelpSkin.blp"
+    },
+    {
+     "file_data_id": 4058980,
+     "name": "4058980.bin",
+     "bytes": 55384,
+     "sha256": "a711323f7ca3697af8afe1c04698dc32f56e2b6273b6fb0145e8573ab214f20a",
+     "role": "external .anim 123.0"
+    },
+    {
+     "file_data_id": 4058981,
+     "name": "4058981.bin",
+     "bytes": 23448,
+     "sha256": "6d8e5f657dc0605b51b2321c676afb5559ea575258938895067d680fe10d8e3a",
+     "role": "external .anim 129.0"
+    },
+    {
+     "file_data_id": 4058982,
+     "name": "4058982.bin",
+     "bytes": 31688,
+     "sha256": "16b23ddd57f87c5e3fd2188efd271e6d40f7d97048fa6184f8684d69f26a7289",
+     "role": "external .anim 128.0"
+    },
+    {
+     "file_data_id": 4058983,
+     "name": "4058983.bin",
+     "bytes": 164616,
+     "sha256": "640e7c0dc11f6dc06b5535b52037bc2aae8c9ff01f34e126e615b5bc9f122627",
+     "role": "external .anim 60.0"
+    },
+    {
+     "file_data_id": 4058984,
+     "name": "4058984.bin",
+     "bytes": 52408,
+     "sha256": "4e898327f42a1a2021236d39420923d649142e3a28395ba7a25d425f383d4ba9",
+     "role": "external .anim 70.0"
+    },
+    {
+     "file_data_id": 4058985,
+     "name": "4058985.bin",
+     "bytes": 53960,
+     "sha256": "40277f50773d1c701d6b60ccf6e5cf4ec995e242da2c61405e9200c2bfaa279f",
+     "role": "external .anim 62.0"
+    },
+    {
+     "file_data_id": 4058986,
+     "name": "4058986.bin",
+     "bytes": 25784,
+     "sha256": "45f9adaa0bcdc6a5a9f0fa9352d3f75276f9c9c8e4d6e920e228467a6064ff02",
+     "role": "external .anim 62.1"
+    },
+    {
+     "file_data_id": 4323308,
+     "name": "4323308.bin",
+     "bytes": 60360,
+     "sha256": "34efc76b91ffd8faa808ecc6004455c5018ff35dcb021469835b0ae5777cc0a4",
+     "role": "external .anim 96.0"
+    },
+    {
+     "file_data_id": 4323310,
+     "name": "4323310.bin",
+     "bytes": 56104,
+     "sha256": "c93088cd763eafdc5f5433d1789b58d03cb0e6992b3ed238f5b171ab9308a476",
+     "role": "external .anim 97.0"
+    },
+    {
+     "file_data_id": 4323311,
+     "name": "4323311.bin",
+     "bytes": 65208,
+     "sha256": "6787e37dd10daa82b3b150da25b1c764f1bbb660da429ef47e4df1b586da76ee",
+     "role": "external .anim 98.0"
+    },
+    {
+     "file_data_id": 4323312,
+     "name": "4323312.bin",
+     "bytes": 67192,
+     "sha256": "a4b17a59d3bc029aae6c81edbc0d1b55fb4dedc207f8961d18a37f44768b3d6f",
+     "role": "external .anim 100.0"
+    },
+    {
+     "file_data_id": 4323313,
+     "name": "4323313.bin",
+     "bytes": 115400,
+     "sha256": "1eb50503ae7e9e545d16cbdd17ace2e2ad2ebce55b9d851480a896ef11dbfbe8",
+     "role": "external .anim 101.0"
+    },
+    {
+     "file_data_id": 4624307,
+     "name": "4624307.bin",
+     "bytes": 34728,
+     "sha256": "91a6c4bd625e591ef14fd9889fa4431a40a922a404f75f804666a9d25e3e0286",
+     "role": "external .anim 120.0"
+    },
+    {
+     "file_data_id": 4624309,
+     "name": "4624309.bin",
+     "bytes": 44472,
+     "sha256": "644e081526f86677d6aff83f08d00378473cce8af2ee9ad373f99c09402c624f",
+     "role": "external .anim 119.0"
+    },
+    {
+     "file_data_id": 4854582,
+     "name": "4854582.bin",
+     "bytes": 90864,
+     "sha256": "4ac5239dae5e6a5644ea2cbd74620ee523862ddfee5264a5741cdb5d70c08e81",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 4854583,
+     "name": "4854583.bin",
+     "bytes": 81824,
+     "sha256": "fdeeb9c3c6a6a15cea0d18d6a2df4e429e7e57fd619978b4d154e56229bb0f8c",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 4854584,
+     "name": "4854584.bin",
+     "bytes": 76400,
+     "sha256": "4ecf428cc3a3c7830751ef633054770f4f4951aa8f4ba36822283d228b0f85e6",
+     "role": "lower-LOD skin (header only: vertex base)"
+    },
+    {
+     "file_data_id": 4854585,
+     "name": "4854585.bin",
+     "bytes": 72464,
+     "sha256": "743b02130712a2da9c883681ade5271ac1d674786c9d39fa7ba2783b8bd13c12",
+     "role": "skin LOD 7"
+    }
+   ]
+  },
+  "game-base": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "Creature\\Gnoll\\gnoll.m2",
+     "sha256": [
+      "81444a7b6f694e3459f1a5259a54301ca63a8c219ed13fddfc05425646eb6402"
+     ],
+     "role": "native model being replaced (PlayableAnimationLookup template); from patch.MPQ"
+    },
+    {
+     "path": "DBFilesClient\\AnimationData.dbc",
+     "sha256": [
+      "990ebbcb611814c8996e67214224c52775a5f5e09e98fadc187da981f060130d"
+     ],
+     "role": "official AnimationData.dbc (fallback chain); from patch.MPQ"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "forever"
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-base"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "skinned-converter",
+   "inputs": {
+    "src": "export",
+    "base": "base"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Creature/Gnoll/gnoll.m2",
+     "sha256": "ffa6b1ba60e5cb892533c9aec8d8489c000d0c7d11ec54388b23e5ecc7b69655"
+    },
+    {
+     "path": "payload/Creature/Gnoll/Gnoll2_ArmorBrown.blp",
+     "sha256": "d3741cd30f454c3fb9db981390edc775be87b56a8036db3f5f5477a164f9ef22"
+    },
+    {
+     "path": "payload/Creature/Gnoll/Gnoll2_Reflect.blp",
+     "sha256": "a261882074655f355eda14b6b67852a2a11b83f16ed294c56e0e277768815e1c"
+    },
+    {
+     "path": "payload/Creature/Gnoll/MossHideGnollWhelpSkin.blp",
+     "sha256": "556c3ccbfe415020b425c94c546946c30bd56d708b1128c631db196a15be29ef"
+    },
+    {
+     "path": "payload/Creature/Gnoll/RedRidgeGnollWhelpSkin.blp",
+     "sha256": "82970e7b0f01d12560c04909bcbe636ca6cc919b91afc57bfcf486b105a0ce53"
+    },
+    {
+     "path": "payload/Creature/Gnoll/RiverPawGnollWhelpSkin.blp",
+     "sha256": "f67d999d6cb1e50fbabe6c6fb03102a05439e3f9f89f4a3b2efbb18980038f63"
+    },
+    {
+     "path": "payload/Creature/Gnoll/RothideGnollWhelpSkin.blp",
+     "sha256": "1468766a9a087c2fbe3196e34d52575ed4bffcd4a73da9c40b03245cc4b87346"
+    },
+    {
+     "path": "payload/Creature/Gnoll/ShadowHideGnollWhelpSkin.blp",
+     "sha256": "dabe310abaecb25c148ee7bef093a973bde0336325387cb7a817045b63c8089b"
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\gnoll.m2",
+    "from": "convert:payload/Creature/Gnoll/gnoll.m2",
+    "sha256": "ffa6b1ba60e5cb892533c9aec8d8489c000d0c7d11ec54388b23e5ecc7b69655"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\Gnoll2_ArmorBrown.blp",
+    "from": "convert:payload/Creature/Gnoll/Gnoll2_ArmorBrown.blp",
+    "sha256": "d3741cd30f454c3fb9db981390edc775be87b56a8036db3f5f5477a164f9ef22"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\Gnoll2_Reflect.blp",
+    "from": "convert:payload/Creature/Gnoll/Gnoll2_Reflect.blp",
+    "sha256": "a261882074655f355eda14b6b67852a2a11b83f16ed294c56e0e277768815e1c"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\MossHideGnollWhelpSkin.blp",
+    "from": "convert:payload/Creature/Gnoll/MossHideGnollWhelpSkin.blp",
+    "sha256": "556c3ccbfe415020b425c94c546946c30bd56d708b1128c631db196a15be29ef"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\RedRidgeGnollWhelpSkin.blp",
+    "from": "convert:payload/Creature/Gnoll/RedRidgeGnollWhelpSkin.blp",
+    "sha256": "82970e7b0f01d12560c04909bcbe636ca6cc919b91afc57bfcf486b105a0ce53"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\RiverPawGnollWhelpSkin.blp",
+    "from": "convert:payload/Creature/Gnoll/RiverPawGnollWhelpSkin.blp",
+    "sha256": "f67d999d6cb1e50fbabe6c6fb03102a05439e3f9f89f4a3b2efbb18980038f63"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\RothideGnollWhelpSkin.blp",
+    "from": "convert:payload/Creature/Gnoll/RothideGnollWhelpSkin.blp",
+    "sha256": "1468766a9a087c2fbe3196e34d52575ed4bffcd4a73da9c40b03245cc4b87346"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Gnoll\\ShadowHideGnollWhelpSkin.blp",
+    "from": "convert:payload/Creature/Gnoll/ShadowHideGnollWhelpSkin.blp",
+    "sha256": "dabe310abaecb25c148ee7bef093a973bde0336325387cb7a817045b63c8089b"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Creature\\Gnoll\\gnoll.m2",
+   "sha256": "ffa6b1ba60e5cb892533c9aec8d8489c000d0c7d11ec54388b23e5ecc7b69655"
+  }
+ ],
+ "provenance": "Forever FileDataIDs model 3886641, skin 4854585; converter recipe tools/skinned-converter/recipes/gnoll.json; pinned skinned_step.py. Output cost: 782 verts, 694 tris, 137 bones, 74 sequences; vs native {'vertices': 1.75, 'triangles': 1.23, 'bones': 2.28}.",
+ "limits": [
+  "Particles, ribbons, lights, modern shader combiners and camera animation are dropped (see the report).",
+  "Replaces the model for every display that uses it; native skin names are reused for the modern skins.",
+  "Riverpaw gnolls (Elwynn): native Creature/Gnoll/gnoll.m2 (CreatureModelData 10) -> Forever creature/gnoll2/gnoll2.m2. Native displays use <Clan>GnollWhelpSkin (type 11 only), so the modern body skins are published under those names; the modern armor slot (type 12, unused by native displays) is fixed to gnoll2_armor_brown."
+ ]
+}

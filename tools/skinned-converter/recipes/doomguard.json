@@ -1,0 +1,33 @@
+{
+  "name": "DoomGuard",
+  "note": "Doomguard (CreatureModelData 68) -> creature/doomguard2_megalow/doomguard2_megalow.m2, decimated; wings stay variation 1.",
+  "source": {
+    "profile": "forever",
+    "model": 1711510,
+    "lod": 0
+  },
+  "native_model_path": "Creature/DoomGuard/DoomGuard.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/DoomGuard/BalrogSkinBlue.blp": 1712074,
+        "Creature/DoomGuard/BalrogSkinRed.blp": 1712073
+      }
+    },
+    "2": {
+      "replaceable": true,
+      "skins": {
+        "Creature/DoomGuard/BalrogWingBlue.blp": 1712079,
+        "Creature/DoomGuard/BalrogWingRed.blp": 1712078
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 1650
+  }
+}

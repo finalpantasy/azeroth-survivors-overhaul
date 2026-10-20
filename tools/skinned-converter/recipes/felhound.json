@@ -1,0 +1,25 @@
+{
+  "name": "FelHound",
+  "note": "Felhound / felhunter (CreatureModelData 139) -> creature/felhound2/felhound2.m2 LOD 2 (red), decimated.",
+  "source": {
+    "profile": "forever",
+    "model": 1245325,
+    "lod": 2
+  },
+  "native_model_path": "Creature/Felhound/FelHound.m2",
+  "textures": {
+    "0": {
+      "replaceable": true,
+      "skins": {
+        "Creature/Felhound/FelHoundSkin.blp": 1245398
+      }
+    }
+  },
+  "env_layers": "drop",
+  "drop_unused_textures": true,
+  "scale": 1.0,
+  "trim_bones": true,
+  "decimate": {
+    "target_vertices": 1500
+  }
+}

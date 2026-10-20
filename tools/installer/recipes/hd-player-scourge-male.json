@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-scourge-male",
+  "version": "0.0.1",
+  "title": "HD player body: Scourge male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Scourge male player model (display 57) with a community HD body via private CreatureModelData row 2374, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Scourge/Male/SCOURGEMale.m2 sha256 59e574d5e0c61ab2f8f3d13dcd6501dd07887d4c8c12b3cc1a46895671796ee1. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Scourge\\Male\\ScourgeMaleHD.m2; repaired M2 sha256 0e0353d0e2d7a3e440f1baf6a3eaf21ddd632ce09974d08de404f14a4137a247, staged (vertex-trimmed) sha256 fb9108116940c898233498f698ba299342570880d6be4dc0b1d1db2811232b9d; 342 CharSections rows, 10 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}

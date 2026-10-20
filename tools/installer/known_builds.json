@@ -1,0 +1,134 @@
+{
+ "schema": "as-known-builds/1",
+ "game_builds": [
+  {
+   "version": "0.103.1",
+   "label": "official v0.103.1",
+   "exe_sha256": "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+   "exe_bytes": 139728384,
+   "modified": false,
+   "official_patches": [
+    {
+     "name": "patch-2.MPQ",
+     "bytes": 4690878,
+     "sha256": "366edee41642a5dda22ed90cc252b543ee375755b7e8bee81e2a6cd59fd7b286"
+    },
+    {
+     "name": "patch-3.MPQ",
+     "bytes": 2580491,
+     "sha256": "75c35ca5b8075197252581e301e8900143007fdf37b493ad271ae1bd39f95a29"
+    },
+    {
+     "name": "patch-4.MPQ",
+     "bytes": 22769233,
+     "sha256": "2e895e0e0ff6a4781d0e0aaa6ea7d32ed1fe36841e17806fe1855cb880d18865"
+    },
+    {
+     "name": "patch-5.MPQ",
+     "bytes": 267019039,
+     "sha256": "5008e56873718b468fa5ae1b697dcbe4f5da9ffe6c793f3ef9939dbd7716f3d8"
+    },
+    {
+     "name": "patch-6.MPQ",
+     "bytes": 212228,
+     "sha256": "cad6ff59b5df028a507581befb836fce07894057e15fe63d9fdc553a95b7ceb5"
+    },
+    {
+     "name": "patch-7.MPQ",
+     "bytes": 276649,
+     "sha256": "f5fb15b181cf01cc6b5cf2ee9948a27ecc4ba27bab9a8bec584df4381932aae6"
+    },
+    {
+     "name": "patch-8.MPQ",
+     "bytes": 4155417,
+     "sha256": "ae3aaa29cadb7aeba8255f5b4a8305c7cbecfe8f0d3ed9646522113d16c3e12e"
+    },
+    {
+     "name": "patch.MPQ",
+     "bytes": 1340212792,
+     "sha256": "6828b191789acdf61b0b8749327cfaed726bea7f015f8be4cc9b0abbfcb696f4"
+    }
+   ],
+   "note": "official data patch-2..8 byte-identical to 0.103.0 (updater manifest checked 2026-10-19)"
+  },
+  {
+   "version": "0.103.0",
+   "label": "official v0.103.0",
+   "exe_sha256": "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+   "exe_bytes": 139713536,
+   "modified": false,
+   "official_patches": [
+    {
+     "name": "patch-2.MPQ",
+     "bytes": 4690878,
+     "sha256": "366edee41642a5dda22ed90cc252b543ee375755b7e8bee81e2a6cd59fd7b286"
+    },
+    {
+     "name": "patch-3.MPQ",
+     "bytes": 2580491,
+     "sha256": "75c35ca5b8075197252581e301e8900143007fdf37b493ad271ae1bd39f95a29"
+    },
+    {
+     "name": "patch-4.MPQ",
+     "bytes": 22769233,
+     "sha256": "2e895e0e0ff6a4781d0e0aaa6ea7d32ed1fe36841e17806fe1855cb880d18865"
+    },
+    {
+     "name": "patch-5.MPQ",
+     "bytes": 267019039,
+     "sha256": "5008e56873718b468fa5ae1b697dcbe4f5da9ffe6c793f3ef9939dbd7716f3d8"
+    },
+    {
+     "name": "patch-6.MPQ",
+     "bytes": 212228,
+     "sha256": "cad6ff59b5df028a507581befb836fce07894057e15fe63d9fdc553a95b7ceb5"
+    },
+    {
+     "name": "patch-7.MPQ",
+     "bytes": 276649,
+     "sha256": "f5fb15b181cf01cc6b5cf2ee9948a27ecc4ba27bab9a8bec584df4381932aae6"
+    },
+    {
+     "name": "patch-8.MPQ",
+     "bytes": 4155417,
+     "sha256": "ae3aaa29cadb7aeba8255f5b4a8305c7cbecfe8f0d3ed9646522113d16c3e12e"
+    },
+    {
+     "name": "patch.MPQ",
+     "bytes": 1340212792,
+     "sha256": "6828b191789acdf61b0b8749327cfaed726bea7f015f8be4cc9b0abbfcb696f4"
+    }
+   ]
+  },
+  {
+   "version": "0.102.3",
+   "label": "official v0.102.3 (previous)",
+   "exe_sha256": "2c2f3926e1f8f8092809f5de0624ac8f2197bb341a2870d408ce0250f13f094a",
+   "modified": false,
+   "official_patches": []
+  },
+  {
+   "version": "0.103.0",
+   "label": "v0.103.0 + water-shader recipe (installer-patched)",
+   "exe_sha256": "524e83499dd8f216fadddf75c57346d03dcecb0b456b1f07f87eb6b109c35a1b",
+   "exe_bytes": 139713536,
+   "modified": true,
+   "base_exe_sha256": "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+   "official_patches": []
+  },
+  {
+   "version": "0.103.1",
+   "label": "v0.103.1 + water-shader recipe (installer-patched)",
+   "exe_sha256": "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e",
+   "exe_bytes": 139728384,
+   "modified": true,
+   "base_exe_sha256": "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7"
+  }
+ ],
+ "client_products": {
+  "wow": "Retail",
+  "wowf": "Forever",
+  "wow_classic": "Classic Progression",
+  "wow_classic_era": "Classic Era"
+ }
+}

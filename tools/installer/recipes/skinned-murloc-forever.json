@@ -1,0 +1,245 @@
+{
+ "schema": "as-recipe/1",
+ "id": "skinned-murloc-forever",
+ "version": "0.1.0",
+ "title": "Animated Forever Murloc model (Creature\\Murloc\\Murloc.m2)",
+ "description": "Exports the Classic (Forever 1.60.1.70245) murloc model, its LOD 0 skin, animations and skins from your own client and converts them to the game's animated MD20 v256 model at Creature\\Murloc\\Murloc.m2, replacing the native model for every creature that uses it.",
+ "status": "experimental",
+ "default": false,
+ "requires": {
+  "game": {
+   "exe_sha256": [
+    "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+    "3b46bad92e7771afa61c93658fd850937834a40f3671af8b1a3e1d2aeb8b63c7",
+    "d220c45dfb0ccc5d10bc5b7226acdf907a956d36396adf856080bb453102cc2e"
+   ],
+   "versions": [
+    "0.103.0",
+    "0.103.1"
+   ]
+  },
+  "tools": [
+   "casc-export",
+   "skinned-converter"
+  ],
+  "disk_mb": 64
+ },
+ "sources": {
+  "forever": {
+   "kind": "casc",
+   "product": "wowf",
+   "version": "1.60.1.70245",
+   "build_number": 70245,
+   "build_key": "e8c4ef4e67bd1d94d820254984258fa8",
+   "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+   "locale": "enUS",
+   "build_config": {
+    "bytes": 83760,
+    "sha256": "29237f0d511842f1d126cdc27989a74593b854ff424061b039c191dcc6ad306c"
+   },
+   "cdn_config": {
+    "bytes": 59333,
+    "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+   },
+   "files": [
+    {
+     "file_data_id": 1113034,
+     "name": "1113034.bin",
+     "bytes": 784004,
+     "sha256": "645932dbd0ae9057fc612c2a75448550f8a1e6a2f05deeefcd3e7f2fec3e00cb",
+     "role": "model"
+    },
+    {
+     "file_data_id": 1113046,
+     "name": "1113046.bin",
+     "bytes": 3916,
+     "sha256": "10347b0a7502f994e7b556e279dc8709a8755c6536163b57a3b388151c48fb1d",
+     "role": "BLP for Creature\\Murloc\\Murloc2_ArmorReflect.blp"
+    },
+    {
+     "file_data_id": 1113047,
+     "name": "1113047.bin",
+     "bytes": 16608,
+     "sha256": "abd40f941eecf5b0d3342d4300be3ccbd4dd5c97245604e2e5c4b30e5c3727cc",
+     "role": "skin LOD 0"
+    },
+    {
+     "file_data_id": 1113057,
+     "name": "1113057.bin",
+     "bytes": 88580,
+     "sha256": "e06c6eee529ffe4d78452cd6e4062c4d9605a8bb0c61e31d11f91fc7451047df",
+     "role": "BLP for Creature\\Murloc\\SahauginskinBlue.blp"
+    },
+    {
+     "file_data_id": 1113058,
+     "name": "1113058.bin",
+     "bytes": 88580,
+     "sha256": "50570bbbdd4a6cbd00ad4b402420a813c129bfbf9ab5242cbf9ed151625fa773",
+     "role": "BLP for Creature\\Murloc\\Sahauginskin.blp"
+    },
+    {
+     "file_data_id": 1113059,
+     "name": "1113059.bin",
+     "bytes": 88580,
+     "sha256": "d5719256933ba32e0c140d82c8efadfeeea572bbbea4a26ece5c57cb91ec457a",
+     "role": "BLP for Creature\\Murloc\\SahauginskinOrange.blp"
+    },
+    {
+     "file_data_id": 1113061,
+     "name": "1113061.bin",
+     "bytes": 88580,
+     "sha256": "9ff979ce5879ef070d58e515ed7126276af2646d99ac831a88c2ecfb893a1a2d",
+     "role": "BLP for Creature\\Murloc\\SahauginskinWhite.blp"
+    },
+    {
+     "file_data_id": 1115036,
+     "name": "1115036.bin",
+     "bytes": 88580,
+     "sha256": "56350e6c9e89da906d6722e655f1e81f0344e6672078837a1ebcad7dbf9672d5",
+     "role": "BLP for Creature\\Murloc\\SahauginskinGray.blp"
+    },
+    {
+     "file_data_id": 5371134,
+     "name": "5371134.bin",
+     "bytes": 34328,
+     "sha256": "ac649ce440c45401165c47e4717dbf9e9cd526fbf59d60c633232e1078601014",
+     "role": "external .anim 82.0"
+    }
+   ]
+  },
+  "game-base": {
+   "kind": "game-chain",
+   "exclude_slots": [
+    "patch-0.MPQ",
+    "patch-1.MPQ"
+   ],
+   "files": [
+    {
+     "path": "Creature\\Murloc\\Murloc.m2",
+     "sha256": [
+      "a3be14ba957b90a702a2d85f4eebaa06d218b9475f492457a3dedc9d5891cf33"
+     ],
+     "role": "native model being replaced (PlayableAnimationLookup template); from patch.MPQ"
+    },
+    {
+     "path": "DBFilesClient\\AnimationData.dbc",
+     "sha256": [
+      "990ebbcb611814c8996e67214224c52775a5f5e09e98fadc187da981f060130d"
+     ],
+     "role": "official AnimationData.dbc (fallback chain); from patch.MPQ"
+    }
+   ]
+  }
+ },
+ "steps": [
+  {
+   "id": "export",
+   "op": "casc-export",
+   "source": "forever"
+  },
+  {
+   "id": "base",
+   "op": "game-extract",
+   "source": "game-base"
+  },
+  {
+   "id": "convert",
+   "op": "run-tool",
+   "tool": "skinned-converter",
+   "inputs": {
+    "src": "export",
+    "base": "base"
+   },
+   "expect_outputs": [
+    {
+     "path": "payload/Creature/Murloc/Murloc.m2",
+     "sha256": "19a3b91e20254660a8e39ac80688c64538f84f0800ccec197d6306f1de0f1ef2"
+    },
+    {
+     "path": "payload/Creature/Murloc/Murloc2_ArmorReflect.blp",
+     "sha256": "10347b0a7502f994e7b556e279dc8709a8755c6536163b57a3b388151c48fb1d"
+    },
+    {
+     "path": "payload/Creature/Murloc/Sahauginskin.blp",
+     "sha256": "50570bbbdd4a6cbd00ad4b402420a813c129bfbf9ab5242cbf9ed151625fa773"
+    },
+    {
+     "path": "payload/Creature/Murloc/SahauginskinBlue.blp",
+     "sha256": "e06c6eee529ffe4d78452cd6e4062c4d9605a8bb0c61e31d11f91fc7451047df"
+    },
+    {
+     "path": "payload/Creature/Murloc/SahauginskinGray.blp",
+     "sha256": "56350e6c9e89da906d6722e655f1e81f0344e6672078837a1ebcad7dbf9672d5"
+    },
+    {
+     "path": "payload/Creature/Murloc/SahauginskinOrange.blp",
+     "sha256": "d5719256933ba32e0c140d82c8efadfeeea572bbbea4a26ece5c57cb91ec457a"
+    },
+    {
+     "path": "payload/Creature/Murloc/SahauginskinWhite.blp",
+     "sha256": "9ff979ce5879ef070d58e515ed7126276af2646d99ac831a88c2ecfb893a1a2d"
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "mpq_files": [
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\Murloc.m2",
+    "from": "convert:payload/Creature/Murloc/Murloc.m2",
+    "sha256": "19a3b91e20254660a8e39ac80688c64538f84f0800ccec197d6306f1de0f1ef2"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\Murloc2_ArmorReflect.blp",
+    "from": "convert:payload/Creature/Murloc/Murloc2_ArmorReflect.blp",
+    "sha256": "10347b0a7502f994e7b556e279dc8709a8755c6536163b57a3b388151c48fb1d"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\Sahauginskin.blp",
+    "from": "convert:payload/Creature/Murloc/Sahauginskin.blp",
+    "sha256": "50570bbbdd4a6cbd00ad4b402420a813c129bfbf9ab5242cbf9ed151625fa773"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\SahauginskinBlue.blp",
+    "from": "convert:payload/Creature/Murloc/SahauginskinBlue.blp",
+    "sha256": "e06c6eee529ffe4d78452cd6e4062c4d9605a8bb0c61e31d11f91fc7451047df"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\SahauginskinGray.blp",
+    "from": "convert:payload/Creature/Murloc/SahauginskinGray.blp",
+    "sha256": "56350e6c9e89da906d6722e655f1e81f0344e6672078837a1ebcad7dbf9672d5"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\SahauginskinOrange.blp",
+    "from": "convert:payload/Creature/Murloc/SahauginskinOrange.blp",
+    "sha256": "d5719256933ba32e0c140d82c8efadfeeea572bbbea4a26ece5c57cb91ec457a"
+   },
+   {
+    "slot": "patch-0.MPQ",
+    "path": "Creature\\Murloc\\SahauginskinWhite.blp",
+    "from": "convert:payload/Creature/Murloc/SahauginskinWhite.blp",
+    "sha256": "9ff979ce5879ef070d58e515ed7126276af2646d99ac831a88c2ecfb893a1a2d"
+   }
+  ]
+ },
+ "acceptance": [
+  {
+   "check": "mpq-has",
+   "slot": "patch-0.MPQ",
+   "path": "Creature\\Murloc\\Murloc.m2",
+   "sha256": "19a3b91e20254660a8e39ac80688c64538f84f0800ccec197d6306f1de0f1ef2"
+  }
+ ],
+ "provenance": "Forever FileDataIDs model 1113034, skin 1113047; converter recipe tools/skinned-converter/recipes/murloc.json; pinned skinned_step.py. Output cost: 1206 verts, 1519 tris, 44 bones, 51 sequences; vs native {'vertices': 1.9, 'triangles': 1.95, 'bones': 0.71}.",
+ "limits": [
+  "Particles, ribbons, lights, modern shader combiners and camera animation are dropped (see the report).",
+  "Replaces the model for every display that uses it; native skin names are reused for the modern skins.",
+  "Murloc Streamrunner (Elwynn): native Creature/Murloc/Murloc.m2 (CreatureModelData 31) -> Forever creature/murloc2/murloc2.m2. Native displays use Sahauginskin{,Blue,Gray,Orange,White} (type 11); the modern skins are published under those names. No grey murloc2 skin exists: Gray uses murloc2_murk."
+ ]
+}

@@ -1,0 +1,649 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-terrain-gapfill-retail",
+  "version": "0.1.0",
+  "title": "Terrain gap-fill: 31 tilesets the game does not ship (Retail)",
+  "description": "The game's ADTs reference 31 tilesets that exist in no shipped archive (the terrain falls back to a default texture there). This exports those exact tilesets from your own Retail 12.1.5.70448 install as same-name BLPs in Data/patch-1.MPQ (shared with hd-terrain-community). Texture-only; no geometry, no DBC. Status stays experimental until the world lab shows the affected tiles.",
+  "status": "experimental",
+  "requires": {
+    "game": {
+      "exe_sha256": [
+        "6382e9ae654295293b82d48fb07a1aa999132775bda10c6c6f80d973d2c1ddfb",
+        "524e83499dd8f216fadddf75c57346d03dcecb0b456b1f07f87eb6b109c35a1b"
+      ],
+      "versions": [
+        "0.103.0"
+      ]
+    },
+    "tools": [
+      "casc-export",
+      "mpq-packer"
+    ],
+    "disk_mb": 16
+  },
+  "sources": {
+    "retail": {
+      "kind": "casc",
+      "product": "wow",
+      "version": "12.1.5.70448",
+      "build_number": 70448,
+      "build_key": "88d5e8ef05ec5a8446cdec93d142d7c6",
+      "cdn_key": "f065eade5276a5ac05606e60a4c5a1f7",
+      "locale": "enUS",
+      "build_config": {
+        "bytes": 87836,
+        "sha256": "f80e4cb45b64a3e00f94db5b6eafc45dfdd03b0734282c1369bcff9443062ba1"
+      },
+      "cdn_config": {
+        "bytes": 59333,
+        "sha256": "cd1efbd680adcc8f8a77dad07011920eaa6b38c32f53217d2acc5e37b44f2c26"
+      },
+      "files": [
+        {
+          "file_data_id": 186775,
+          "name": "tileset-186775.blp",
+          "role": "tileset tileset\\alteracmtns\\alteraccropbase.blp",
+          "bytes": 44876,
+          "sha256": "950673978d456a6bbd35680921cc61f0d9f795f46e04e0bdbe0bfed608274e58"
+        },
+        {
+          "file_data_id": 186948,
+          "name": "tileset-186948.blp",
+          "role": "tileset tileset\\burningstepps\\burningsteppslavatest03.blp",
+          "bytes": 44876,
+          "sha256": "161b997fa93ae87c508d242b03ce7546f68b93f7dcf13880b46b77b8a0473bea"
+        },
+        {
+          "file_data_id": 186952,
+          "name": "tileset-186952.blp",
+          "role": "tileset tileset\\burningstepps\\burningsteppsrock02.blp",
+          "bytes": 44876,
+          "sha256": "67ec8f5a90bc3778c14b958937e1049eb19970b134a7b151d0f7efdc18ed0b8b"
+        },
+        {
+          "file_data_id": 186995,
+          "name": "tileset-186995.blp",
+          "role": "tileset tileset\\deadwind pass\\deadwindpassweb.blp",
+          "bytes": 44876,
+          "sha256": "a6bfe170bd7a27bd8941121716719a94df1a577c519d12b3cabb82e14295b067"
+        },
+        {
+          "file_data_id": 187013,
+          "name": "tileset-187013.blp",
+          "role": "tileset tileset\\desolace\\desolacerockhighlight.blp",
+          "bytes": 44876,
+          "sha256": "a70bae32a3d9777275ce8f8c5a85459470b95d056dbcfa4ae1e244b44e5eb77d"
+        },
+        {
+          "file_data_id": 187075,
+          "name": "tileset-187075.blp",
+          "role": "tileset tileset\\duskwood\\duskwoodcrop.blp",
+          "bytes": 44876,
+          "sha256": "0bc0715a037b08c63912800cc21c9a1539b673e35d17cce961560bfbf8a0daf3"
+        },
+        {
+          "file_data_id": 188513,
+          "name": "tileset-188513.blp",
+          "role": "tileset tileset\\feralas\\feralassand.blp",
+          "bytes": 44876,
+          "sha256": "40d7d33f3ea71c657fe95343df16d8db8c921fb1da8e1ab97dbe428f470dfe54"
+        },
+        {
+          "file_data_id": 188515,
+          "name": "tileset-188515.blp",
+          "role": "tileset tileset\\generic\\black.blp",
+          "bytes": 1513,
+          "sha256": "58a3cc0656ed98d7a33ff37eef9eb4e18b29899598914bbcf55c9f86ce669dec"
+        },
+        {
+          "file_data_id": 188561,
+          "name": "tileset-188561.blp",
+          "role": "tileset tileset\\ironforge\\ironforgeice01.blp",
+          "bytes": 44876,
+          "sha256": "1835414e334440f8249387d18de7f08b518c04222c20cc072146efb162cbb175"
+        },
+        {
+          "file_data_id": 188569,
+          "name": "tileset-188569.blp",
+          "role": "tileset tileset\\ironforge\\ironforgerock08brown.blp",
+          "bytes": 44876,
+          "sha256": "4d377bfd3e7d72d4513b20ea0d7b63c5ab47d01a4f8ca90f99a7bcd72f7c4290"
+        },
+        {
+          "file_data_id": 188579,
+          "name": "tileset-188579.blp",
+          "role": "tileset tileset\\ironforge\\ironforgesnow05scrapebrown.blp",
+          "bytes": 44876,
+          "sha256": "dd9eba137955de81f81069aff4b3b09ec0b63f57aa65c2fe681ea17c17aa38c5"
+        },
+        {
+          "file_data_id": 188690,
+          "name": "tileset-188690.blp",
+          "role": "tileset tileset\\plaguelands\\plaguedearthcreep02.blp",
+          "bytes": 44876,
+          "sha256": "648d0ebda07ab478ddca8ba876f0bb96cb63ec51f880434f1ca87acad05dcf50"
+        },
+        {
+          "file_data_id": 188698,
+          "name": "tileset-188698.blp",
+          "role": "tileset tileset\\plaguelandseast\\eastplaguedbasedirt.blp",
+          "bytes": 44876,
+          "sha256": "00514af9773d3c0a512be34341ecd8bae605f029779cbf00444640ba5456acb5"
+        },
+        {
+          "file_data_id": 188712,
+          "name": "tileset-188712.blp",
+          "role": "tileset tileset\\plaguelandseast\\eastplaguedcracks.blp",
+          "bytes": 44876,
+          "sha256": "51da8f62a1740a5ed4c2eddff3a6c0419e5188bed6a95aafd71af3c9fa658cb7"
+        },
+        {
+          "file_data_id": 188714,
+          "name": "tileset-188714.blp",
+          "role": "tileset tileset\\plaguelandseast\\eastplaguedcreep01.blp",
+          "bytes": 44876,
+          "sha256": "b002e36ffa156f9c6220e6e32ea154679fb1a9c97bc9716fbc6f16c5710e2374"
+        },
+        {
+          "file_data_id": 188748,
+          "name": "tileset-188748.blp",
+          "role": "tileset tileset\\redridge\\redridgecrop.blp",
+          "bytes": 44876,
+          "sha256": "320991425cb43e57d8ff6626314879f45e8730b625c9791691b99298c9627a97"
+        },
+        {
+          "file_data_id": 188771,
+          "name": "tileset-188771.blp",
+          "role": "tileset tileset\\silithis\\silithisrockhighlight.blp",
+          "bytes": 44876,
+          "sha256": "9a2371ec7a2e73d71cbcafddfdfaa08509dd775ff75c490f9d17514613ed285b"
+        },
+        {
+          "file_data_id": 188827,
+          "name": "tileset-188827.blp",
+          "role": "tileset tileset\\stranglethorn\\stranglethornmossrootdirt01.blp",
+          "bytes": 44876,
+          "sha256": "a8d0a68c0bbea2906525ee51646517109a0dc307e622a6186fd51be0d3a5c57f"
+        },
+        {
+          "file_data_id": 188860,
+          "name": "tileset-188860.blp",
+          "role": "tileset tileset\\tanaris\\tanarispurplebug01.blp",
+          "bytes": 44876,
+          "sha256": "fc668497aed4ad5c41c93261e6cee544aceda5fdb84da06d2a02a4ec11c457c2"
+        },
+        {
+          "file_data_id": 188862,
+          "name": "tileset-188862.blp",
+          "role": "tileset tileset\\tanaris\\tanarispurplebug02.blp",
+          "bytes": 44876,
+          "sha256": "75a0c49134911365bde0785a2d280077a4199c85f11cea2c706d3abaa9624cca"
+        },
+        {
+          "file_data_id": 188898,
+          "name": "tileset-188898.blp",
+          "role": "tileset tileset\\the badlands\\cobrapillartile01.blp",
+          "bytes": 44876,
+          "sha256": "594a682552a5f4ad817e5f661a898ad09fb2ef0e1f42bdf2134f78b4c4a89b8b"
+        },
+        {
+          "file_data_id": 188900,
+          "name": "tileset-188900.blp",
+          "role": "tileset tileset\\the badlands\\cobrapillartile02alpha.blp",
+          "bytes": 44876,
+          "sha256": "1d1d53a1e4ad38324caa3714e8d47bc454fff4cebf95a7cd726ebf2675fbc1b2"
+        },
+        {
+          "file_data_id": 188902,
+          "name": "tileset-188902.blp",
+          "role": "tileset tileset\\the blasted lands\\blastedlandsblack.blp",
+          "bytes": 1228,
+          "sha256": "084667121dae35b0eaa5c1019ba8bb5c77e2af3ae9fd2d5110dccb5a627902e5"
+        },
+        {
+          "file_data_id": 188921,
+          "name": "tileset-188921.blp",
+          "role": "tileset tileset\\the blasted lands\\blastedlandsrockcrackhighlight.blp",
+          "bytes": 44876,
+          "sha256": "d4a41a08b5961dfa6f2328315a0c2e0e53b250304cd875f109bda8ff64cf493e"
+        },
+        {
+          "file_data_id": 188983,
+          "name": "tileset-188983.blp",
+          "role": "tileset tileset\\westwood\\westfallcropbase.blp",
+          "bytes": 44876,
+          "sha256": "0e3f72e3a3126a1439e01c56cc6533cd7044a42a859dd9445ae8f8ce60f7c580"
+        },
+        {
+          "file_data_id": 188985,
+          "name": "tileset-188985.blp",
+          "role": "tileset tileset\\westwood\\westfallcropburned.blp",
+          "bytes": 44876,
+          "sha256": "03b32975f8e24fb225530345451ff2a12e8af9cf99b66645c0c711b7d13bb96a"
+        },
+        {
+          "file_data_id": 189037,
+          "name": "tileset-189037.blp",
+          "role": "tileset tileset\\winterspring grove\\winterspringicecracked.blp",
+          "bytes": 44876,
+          "sha256": "ffa0b73e8c5ad1f130ec8d582c4e5f9ea06b90d025a5453805feb487638bc7db"
+        },
+        {
+          "file_data_id": 189045,
+          "name": "tileset-189045.blp",
+          "role": "tileset tileset\\winterspring grove\\winterspringicesnowalpha.blp",
+          "bytes": 44876,
+          "sha256": "2edcfb7123f7a2efada1f72c10cb20b202250a2a12896e739b026ad1908d58ed"
+        },
+        {
+          "file_data_id": 189051,
+          "name": "tileset-189051.blp",
+          "role": "tileset tileset\\winterspring grove\\winterspringsnowripple.blp",
+          "bytes": 44876,
+          "sha256": "3fad9aaa4681868921371af800085983cd016a532b66f768a315e7f23a017072"
+        },
+        {
+          "file_data_id": 189053,
+          "name": "tileset-189053.blp",
+          "role": "tileset tileset\\winterspring grove\\winterspringsnowsolid.blp",
+          "bytes": 44876,
+          "sha256": "2aa781eb8c0c7c01ad263639c29dcc848dcd8caa9a121933a9d07aa8eb0a5cef"
+        },
+        {
+          "file_data_id": 189066,
+          "name": "tileset-189066.blp",
+          "role": "tileset tileset\\zulgurub\\zulgurubdirt01.blp",
+          "bytes": 44876,
+          "sha256": "da2bddc60411bd02538febc11f7e41517609bdbb581b7e56fec6cbffbfc1ca02"
+        }
+      ],
+      "note": "tilesets referenced by the game's ADTs and present in no shipped MPQ (analysis/world/zone-coverage.json)"
+    }
+  },
+  "steps": [
+    {
+      "id": "export",
+      "op": "casc-export",
+      "source": "retail"
+    }
+  ],
+  "outputs": {
+    "mpq_files": [
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\alteracmtns\\alteraccropbase.blp",
+        "from": "export:tileset-186775.blp",
+        "sha256": "950673978d456a6bbd35680921cc61f0d9f795f46e04e0bdbe0bfed608274e58"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\burningstepps\\burningsteppslavatest03.blp",
+        "from": "export:tileset-186948.blp",
+        "sha256": "161b997fa93ae87c508d242b03ce7546f68b93f7dcf13880b46b77b8a0473bea"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\burningstepps\\burningsteppsrock02.blp",
+        "from": "export:tileset-186952.blp",
+        "sha256": "67ec8f5a90bc3778c14b958937e1049eb19970b134a7b151d0f7efdc18ed0b8b"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\deadwind pass\\deadwindpassweb.blp",
+        "from": "export:tileset-186995.blp",
+        "sha256": "a6bfe170bd7a27bd8941121716719a94df1a577c519d12b3cabb82e14295b067"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\desolace\\desolacerockhighlight.blp",
+        "from": "export:tileset-187013.blp",
+        "sha256": "a70bae32a3d9777275ce8f8c5a85459470b95d056dbcfa4ae1e244b44e5eb77d"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\duskwood\\duskwoodcrop.blp",
+        "from": "export:tileset-187075.blp",
+        "sha256": "0bc0715a037b08c63912800cc21c9a1539b673e35d17cce961560bfbf8a0daf3"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\feralas\\feralassand.blp",
+        "from": "export:tileset-188513.blp",
+        "sha256": "40d7d33f3ea71c657fe95343df16d8db8c921fb1da8e1ab97dbe428f470dfe54"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\generic\\black.blp",
+        "from": "export:tileset-188515.blp",
+        "sha256": "58a3cc0656ed98d7a33ff37eef9eb4e18b29899598914bbcf55c9f86ce669dec"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\ironforge\\ironforgeice01.blp",
+        "from": "export:tileset-188561.blp",
+        "sha256": "1835414e334440f8249387d18de7f08b518c04222c20cc072146efb162cbb175"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\ironforge\\ironforgerock08brown.blp",
+        "from": "export:tileset-188569.blp",
+        "sha256": "4d377bfd3e7d72d4513b20ea0d7b63c5ab47d01a4f8ca90f99a7bcd72f7c4290"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\ironforge\\ironforgesnow05scrapebrown.blp",
+        "from": "export:tileset-188579.blp",
+        "sha256": "dd9eba137955de81f81069aff4b3b09ec0b63f57aa65c2fe681ea17c17aa38c5"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\plaguelands\\plaguedearthcreep02.blp",
+        "from": "export:tileset-188690.blp",
+        "sha256": "648d0ebda07ab478ddca8ba876f0bb96cb63ec51f880434f1ca87acad05dcf50"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\plaguelandseast\\eastplaguedbasedirt.blp",
+        "from": "export:tileset-188698.blp",
+        "sha256": "00514af9773d3c0a512be34341ecd8bae605f029779cbf00444640ba5456acb5"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\plaguelandseast\\eastplaguedcracks.blp",
+        "from": "export:tileset-188712.blp",
+        "sha256": "51da8f62a1740a5ed4c2eddff3a6c0419e5188bed6a95aafd71af3c9fa658cb7"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\plaguelandseast\\eastplaguedcreep01.blp",
+        "from": "export:tileset-188714.blp",
+        "sha256": "b002e36ffa156f9c6220e6e32ea154679fb1a9c97bc9716fbc6f16c5710e2374"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\redridge\\redridgecrop.blp",
+        "from": "export:tileset-188748.blp",
+        "sha256": "320991425cb43e57d8ff6626314879f45e8730b625c9791691b99298c9627a97"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\silithis\\silithisrockhighlight.blp",
+        "from": "export:tileset-188771.blp",
+        "sha256": "9a2371ec7a2e73d71cbcafddfdfaa08509dd775ff75c490f9d17514613ed285b"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\stranglethorn\\stranglethornmossrootdirt01.blp",
+        "from": "export:tileset-188827.blp",
+        "sha256": "a8d0a68c0bbea2906525ee51646517109a0dc307e622a6186fd51be0d3a5c57f"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\tanaris\\tanarispurplebug01.blp",
+        "from": "export:tileset-188860.blp",
+        "sha256": "fc668497aed4ad5c41c93261e6cee544aceda5fdb84da06d2a02a4ec11c457c2"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\tanaris\\tanarispurplebug02.blp",
+        "from": "export:tileset-188862.blp",
+        "sha256": "75a0c49134911365bde0785a2d280077a4199c85f11cea2c706d3abaa9624cca"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\the badlands\\cobrapillartile01.blp",
+        "from": "export:tileset-188898.blp",
+        "sha256": "594a682552a5f4ad817e5f661a898ad09fb2ef0e1f42bdf2134f78b4c4a89b8b"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\the badlands\\cobrapillartile02alpha.blp",
+        "from": "export:tileset-188900.blp",
+        "sha256": "1d1d53a1e4ad38324caa3714e8d47bc454fff4cebf95a7cd726ebf2675fbc1b2"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\the blasted lands\\blastedlandsblack.blp",
+        "from": "export:tileset-188902.blp",
+        "sha256": "084667121dae35b0eaa5c1019ba8bb5c77e2af3ae9fd2d5110dccb5a627902e5"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\the blasted lands\\blastedlandsrockcrackhighlight.blp",
+        "from": "export:tileset-188921.blp",
+        "sha256": "d4a41a08b5961dfa6f2328315a0c2e0e53b250304cd875f109bda8ff64cf493e"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\westwood\\westfallcropbase.blp",
+        "from": "export:tileset-188983.blp",
+        "sha256": "0e3f72e3a3126a1439e01c56cc6533cd7044a42a859dd9445ae8f8ce60f7c580"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\westwood\\westfallcropburned.blp",
+        "from": "export:tileset-188985.blp",
+        "sha256": "03b32975f8e24fb225530345451ff2a12e8af9cf99b66645c0c711b7d13bb96a"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\winterspring grove\\winterspringicecracked.blp",
+        "from": "export:tileset-189037.blp",
+        "sha256": "ffa0b73e8c5ad1f130ec8d582c4e5f9ea06b90d025a5453805feb487638bc7db"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\winterspring grove\\winterspringicesnowalpha.blp",
+        "from": "export:tileset-189045.blp",
+        "sha256": "2edcfb7123f7a2efada1f72c10cb20b202250a2a12896e739b026ad1908d58ed"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\winterspring grove\\winterspringsnowripple.blp",
+        "from": "export:tileset-189051.blp",
+        "sha256": "3fad9aaa4681868921371af800085983cd016a532b66f768a315e7f23a017072"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\winterspring grove\\winterspringsnowsolid.blp",
+        "from": "export:tileset-189053.blp",
+        "sha256": "2aa781eb8c0c7c01ad263639c29dcc848dcd8caa9a121933a9d07aa8eb0a5cef"
+      },
+      {
+        "slot": "patch-1.MPQ",
+        "path": "tileset\\zulgurub\\zulgurubdirt01.blp",
+        "from": "export:tileset-189066.blp",
+        "sha256": "da2bddc60411bd02538febc11f7e41517609bdbb581b7e56fec6cbffbfc1ca02"
+      }
+    ]
+  },
+  "acceptance": [
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\alteracmtns\\alteraccropbase.blp",
+      "sha256": "950673978d456a6bbd35680921cc61f0d9f795f46e04e0bdbe0bfed608274e58"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\burningstepps\\burningsteppslavatest03.blp",
+      "sha256": "161b997fa93ae87c508d242b03ce7546f68b93f7dcf13880b46b77b8a0473bea"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\burningstepps\\burningsteppsrock02.blp",
+      "sha256": "67ec8f5a90bc3778c14b958937e1049eb19970b134a7b151d0f7efdc18ed0b8b"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\deadwind pass\\deadwindpassweb.blp",
+      "sha256": "a6bfe170bd7a27bd8941121716719a94df1a577c519d12b3cabb82e14295b067"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\desolace\\desolacerockhighlight.blp",
+      "sha256": "a70bae32a3d9777275ce8f8c5a85459470b95d056dbcfa4ae1e244b44e5eb77d"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\duskwood\\duskwoodcrop.blp",
+      "sha256": "0bc0715a037b08c63912800cc21c9a1539b673e35d17cce961560bfbf8a0daf3"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\feralas\\feralassand.blp",
+      "sha256": "40d7d33f3ea71c657fe95343df16d8db8c921fb1da8e1ab97dbe428f470dfe54"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\generic\\black.blp",
+      "sha256": "58a3cc0656ed98d7a33ff37eef9eb4e18b29899598914bbcf55c9f86ce669dec"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\ironforge\\ironforgeice01.blp",
+      "sha256": "1835414e334440f8249387d18de7f08b518c04222c20cc072146efb162cbb175"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\ironforge\\ironforgerock08brown.blp",
+      "sha256": "4d377bfd3e7d72d4513b20ea0d7b63c5ab47d01a4f8ca90f99a7bcd72f7c4290"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\ironforge\\ironforgesnow05scrapebrown.blp",
+      "sha256": "dd9eba137955de81f81069aff4b3b09ec0b63f57aa65c2fe681ea17c17aa38c5"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\plaguelands\\plaguedearthcreep02.blp",
+      "sha256": "648d0ebda07ab478ddca8ba876f0bb96cb63ec51f880434f1ca87acad05dcf50"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\plaguelandseast\\eastplaguedbasedirt.blp",
+      "sha256": "00514af9773d3c0a512be34341ecd8bae605f029779cbf00444640ba5456acb5"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\plaguelandseast\\eastplaguedcracks.blp",
+      "sha256": "51da8f62a1740a5ed4c2eddff3a6c0419e5188bed6a95aafd71af3c9fa658cb7"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\plaguelandseast\\eastplaguedcreep01.blp",
+      "sha256": "b002e36ffa156f9c6220e6e32ea154679fb1a9c97bc9716fbc6f16c5710e2374"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\redridge\\redridgecrop.blp",
+      "sha256": "320991425cb43e57d8ff6626314879f45e8730b625c9791691b99298c9627a97"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\silithis\\silithisrockhighlight.blp",
+      "sha256": "9a2371ec7a2e73d71cbcafddfdfaa08509dd775ff75c490f9d17514613ed285b"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\stranglethorn\\stranglethornmossrootdirt01.blp",
+      "sha256": "a8d0a68c0bbea2906525ee51646517109a0dc307e622a6186fd51be0d3a5c57f"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\tanaris\\tanarispurplebug01.blp",
+      "sha256": "fc668497aed4ad5c41c93261e6cee544aceda5fdb84da06d2a02a4ec11c457c2"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\tanaris\\tanarispurplebug02.blp",
+      "sha256": "75a0c49134911365bde0785a2d280077a4199c85f11cea2c706d3abaa9624cca"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\the badlands\\cobrapillartile01.blp",
+      "sha256": "594a682552a5f4ad817e5f661a898ad09fb2ef0e1f42bdf2134f78b4c4a89b8b"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\the badlands\\cobrapillartile02alpha.blp",
+      "sha256": "1d1d53a1e4ad38324caa3714e8d47bc454fff4cebf95a7cd726ebf2675fbc1b2"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\the blasted lands\\blastedlandsblack.blp",
+      "sha256": "084667121dae35b0eaa5c1019ba8bb5c77e2af3ae9fd2d5110dccb5a627902e5"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\the blasted lands\\blastedlandsrockcrackhighlight.blp",
+      "sha256": "d4a41a08b5961dfa6f2328315a0c2e0e53b250304cd875f109bda8ff64cf493e"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\westwood\\westfallcropbase.blp",
+      "sha256": "0e3f72e3a3126a1439e01c56cc6533cd7044a42a859dd9445ae8f8ce60f7c580"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\westwood\\westfallcropburned.blp",
+      "sha256": "03b32975f8e24fb225530345451ff2a12e8af9cf99b66645c0c711b7d13bb96a"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\winterspring grove\\winterspringicecracked.blp",
+      "sha256": "ffa0b73e8c5ad1f130ec8d582c4e5f9ea06b90d025a5453805feb487638bc7db"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\winterspring grove\\winterspringicesnowalpha.blp",
+      "sha256": "2edcfb7123f7a2efada1f72c10cb20b202250a2a12896e739b026ad1908d58ed"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\winterspring grove\\winterspringsnowripple.blp",
+      "sha256": "3fad9aaa4681868921371af800085983cd016a532b66f768a315e7f23a017072"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\winterspring grove\\winterspringsnowsolid.blp",
+      "sha256": "2aa781eb8c0c7c01ad263639c29dcc848dcd8caa9a121933a9d07aa8eb0a5cef"
+    },
+    {
+      "check": "mpq-has",
+      "slot": "patch-1.MPQ",
+      "path": "tileset\\zulgurub\\zulgurubdirt01.blp",
+      "sha256": "da2bddc60411bd02538febc11f7e41517609bdbb581b7e56fec6cbffbfc1ca02"
+    }
+  ],
+  "provenance": "Retail 12.1.5.70448 FileDataIDs listed per file; selection tool tools/world/inventory_world.py + zone_coverage.py; probe evidence analysis/world/payload-world-gapfill-report.json."
+}

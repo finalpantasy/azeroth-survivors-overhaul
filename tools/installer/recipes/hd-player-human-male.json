@@ -1,0 +1,10 @@
+{
+  "schema": "as-recipe/1",
+  "id": "hd-player-human-male",
+  "version": "0.0.1",
+  "title": "HD player body: Human male (model, textures, faces, hair, skin colors)",
+  "status": "unavailable",
+  "description": "Replaces the Human male player model (display 49) with a community HD body via private CreatureModelData row 2366, plus CharSections rows for every skin/face/hair/facial-hair/underwear variation. Built by tools/characters/build_characters.py into mod-source/characters-hd (shared patch-0 payload with the other 15 bodies).",
+  "unavailable_reason": "Not reproducible from an owned WoW install: model and textures come from the community VanillaHD/Patch-A repository (commit dcf3647e80104d03c02e1540c61cce3ca7e24766), source M2 Character/Human/Male/humanmale.m2 sha256 08d475383d8159c6be1493f8f5409d4f3751e781e502d1f4d964cf4f189e85a0. A Retail-derived replacement needs the asset-coverage worker's character-model conversion (retail M2 -> 1.12 format, 5 geoset families, CharSections remap) which is not built yet.",
+  "provenance": "mod-source/characters-hd/payload; private model Character\\Human\\Male\\HumanMaleHD.m2; repaired M2 sha256 bd6b2d2bfef402404a2949e082b1a75be7d9d8b09c60bd503d3342159ceff532, staged (vertex-trimmed) sha256 7098e96b56a1e75db5b4458482792278b842840e2a2fcf6090c165d16283f15e; 352 CharSections rows, 20 cells fall back to native textures (analysis/characters/native-fallback-cells.csv)."
+}
