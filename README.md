@@ -1,5 +1,7 @@
 # Azeroth Survivors Overhaul
 
+[![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20finalpantasy-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/finalpantasy)
+
 Recipes, installer and converters that upgrade the **Windows build of Azeroth Survivors** (the survivor-like built on
 World of Warcraft art) with higher-resolution models and textures built **from your own WoW install**, plus new races,
 zones, bosses and gear.
@@ -68,4 +70,8 @@ Developer scripts under `tools/*` expect a workspace folder (game files at the r
   included or redistributed here; users obtain it themselves.
 * World of Warcraft and its art are the property of Blizzard Entertainment. Screenshots show game rendering from local
   lab runs; no Blizzard assets are included. Third-party code notices: `tools/distribution/THIRD_PARTY_NOTICES.txt`.
-* Code and documentation here: MIT (placeholder, see `LICENSE`).
+* Code and documentation here: MIT, copyright finalpantasy (see `LICENSE`). The license covers only this repository's code, recipes and docs. Game files, World of Warcraft assets and community packs are NOT covered by it and are NOT included.
+
+## Support
+
+If this saved you time, you can support the work on [Ko-fi](https://ko-fi.com/finalpantasy). Entirely optional.
