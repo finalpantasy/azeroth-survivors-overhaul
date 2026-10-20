@@ -104,6 +104,26 @@ def prepare(client_root: Path, output: Path, catalog_path: Path):
     return adapter, catalog, inventory, before, output
 
 
+def built_from_pinned_source(library: Path) -> bool:
+    """True when library is <casc-offline>/build-x64/Release/CascLib.dll and a build-logs record proves
+    build_runner.py built exactly this file from the source pinned in source-manifest.json (MSVC output is not
+    byte-reproducible, so the pinned hash alone would reject every rebuild)."""
+    try:
+        tool = library.parents[2]
+        manifest = tool / "source-manifest.json"
+        if library.parent.name != "Release" or library.parents[1].name != "build-x64" or not manifest.is_file():
+            return False
+        wanted, manifest_hash = digest(library), digest(manifest)
+        for record_path in sorted((tool / "build-logs").glob("build-record-*.json")):
+            rec = json.loads(record_path.read_text(encoding="utf-8"))
+            if (rec.get("status") == "build-success" and rec.get("dll_sha256") == wanted
+                    and rec.get("source_manifest_sha256") == manifest_hash):
+                return True
+    except (OSError, ValueError, IndexError):
+        return False
+    return False
+
+
 def export(args) -> dict:
     adapter, catalog, inventory, before, output = prepare(args.client_root, args.output, args.catalog)
     report = {
@@ -118,7 +138,7 @@ def export(args) -> dict:
     if args.library is None:
         raise ValueError("--extract requires --library pointing to the audited offline CascLib.dll")
     library = args.library.resolve(strict=True)
-    if digest(library) != LIBRARY_SHA256:
+    if digest(library) != LIBRARY_SHA256 and not built_from_pinned_source(library):
         raise ValueError("CascLib runtime hash is not the audited offline build")
     if os.name != "nt":
         raise RuntimeError("Extraction requires 64-bit Windows")

@@ -3,7 +3,7 @@
   "tools": {
     "casc-export": {
       "script": "casc_export.py",
-      "sha256": "714d31764f13f18434dd9bd894177250ef20dc5fba9defdd2010e44079d6eb20",
+      "sha256": "975c1921a99ba8187395d5e1fd73a0a18d56d0becc3f8017682f797a01dc8c28",
       "search": [
         "tools"
       ],
