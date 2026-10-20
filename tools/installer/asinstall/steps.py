@@ -96,11 +96,34 @@ def check_casc_dll(path: Path | None) -> Path:
     path = Path(path)
     if not path.is_file():
         raise InstallerError(f"CascLib runtime not found: {path}", code="casc-dll-missing")
-    if sha256_file(path) != CASC_DLL_SHA256:
-        raise InstallerError("CascLib runtime hash is not the audited offline build.",
-                             f"Expected SHA-256 {CASC_DLL_SHA256}. Rebuild with casc-offline/build.ps1; do not use another CascLib.",
+    digest = sha256_file(path)
+    if digest != CASC_DLL_SHA256 and not _built_from_pinned_source(path, digest):
+        raise InstallerError("CascLib runtime is not the audited offline build.",
+                             f"Expected SHA-256 {CASC_DLL_SHA256}, or a DLL produced by tools/casc-offline/build.ps1 from this "
+                             "repository (its build-logs record must match). Do not use another CascLib.",
                              "casc-dll-hash")
     return path.resolve()
+
+
+def _built_from_pinned_source(path: Path, digest: str) -> bool:
+    """True when `path` is <casc-offline>/build-x64/Release/CascLib.dll and a build record next to it proves that
+    build_runner.py built exactly this file from the source pinned in source-manifest.json (MSVC output is not
+    byte-reproducible, so the pinned hash alone would reject every rebuild)."""
+    try:
+        tool = path.resolve().parents[2]
+        manifest = tool / "source-manifest.json"
+        logs = tool / "build-logs"
+        if path.resolve().parent.name != "Release" or path.resolve().parents[1].name != "build-x64" or not manifest.is_file():
+            return False
+        manifest_hash = sha256_file(manifest)
+        for record_path in sorted(logs.glob("build-record-*.json")):
+            rec = json.loads(record_path.read_text(encoding="utf-8"))
+            if (rec.get("status") == "build-success" and rec.get("dll_sha256") == digest
+                    and rec.get("source_manifest_sha256") == manifest_hash):
+                return True
+    except (OSError, ValueError, IndexError):
+        return False
+    return False
 
 
 def casc_preflight(ctx: Context, recipe: Recipe, source_id: str) -> dict[str, Any]:
