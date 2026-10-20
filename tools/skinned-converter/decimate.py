@@ -45,8 +45,12 @@ def _q_add(q, r):
         q[i] += r[i]
 
 
-def decimate(m: m2ir.Model, target_vertices: int, weight_penalty: float = 0.002, boundary_weight: float = 10.0):
-    """Reduce the skin to at most target_vertices distinct vertices (in place). Returns a report dict."""
+def decimate(m: m2ir.Model, target_vertices: int, weight_penalty: float = 0.002, boundary_weight: float = 10.0,
+             min_component: int = 0, sections=None):
+    """Reduce the skin to at most target_vertices distinct vertices (in place). Returns a report dict.
+    min_component > 0: a connected piece keeps at least that many vertex positions, so small separate pieces (the
+    infernal's rocks) are simplified but never collapsed away. sections: only vertices whose every coincident copy lies
+    in these skin sections move (the rest of the mesh stays exact)."""
     n = len(m.lookup)
     pos, wts = [], []
     for g in m.lookup:
@@ -134,6 +138,26 @@ def decimate(m: m2ir.Model, target_vertices: int, weight_penalty: float = 0.002,
 
     alive_v = [True] * n
 
+    # connected pieces over position groups (collapses stay inside a piece, so membership is fixed)
+    comp = list(range(ng))
+
+    def root(x):
+        while comp[x] != x:
+            comp[x] = comp[comp[x]]
+            x = comp[x]
+        return x
+    for ti, t in enumerate(tris):
+        if alive_t[ti]:
+            r0 = root(gid[t[0]])
+            for v in t[1:]:
+                r = root(gid[v])
+                if r != r0:
+                    comp[r] = r0
+    comp_of = [root(g) for g in range(ng)]
+    comp_live = {}
+    for g in range(ng):
+        comp_live[comp_of[g]] = comp_live.get(comp_of[g], 0) + 1
+
     def nbrs(v):
         out = set()
         for ti in vtris[v]:
@@ -212,6 +236,10 @@ def decimate(m: m2ir.Model, target_vertices: int, weight_penalty: float = 0.002,
         c, A, B, ver = heapq.heappop(heap)
         if ver != version[A] or not members[A] or not members[B]:
             continue
+        if min_component and comp_live[comp_of[A]] <= min_component:
+            continue
+        if sections is not None and any(sec_of[a] not in sections for a in members[A]):
+            continue
         pairs = plan(A, B)
         if pairs is None or not all(local_ok(a, b) for a, b in pairs):
             # refuse this target; try A's other targets later by lowering its priority
@@ -244,6 +272,7 @@ def decimate(m: m2ir.Model, target_vertices: int, weight_penalty: float = 0.002,
             alive_v[a] = False
         _q_add(gq[B], gq[A])
         members[A] = []
+        comp_live[comp_of[A]] -= 1
         collapses += 1
         worst = max(worst, c)
         count = distinct()
@@ -276,4 +305,6 @@ def decimate(m: m2ir.Model, target_vertices: int, weight_penalty: float = 0.002,
     return {"target_vertices": target_vertices, "vertices_before": start, "vertices_after": len(used_g),
             "triangles_after": len(new_tris) // 3, "collapses": collapses,
             "worst_cost_rel_diag": round(math.sqrt(max(worst, 0) / diag2), 5),
-            "weight_penalty": weight_penalty, "boundary_weight": boundary_weight}
+            "weight_penalty": weight_penalty, "boundary_weight": boundary_weight,
+            **({"min_component": min_component} if min_component else {}),
+            **({"sections": sorted(sections)} if sections is not None else {})}

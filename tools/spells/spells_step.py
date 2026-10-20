@@ -30,9 +30,9 @@ SKIN = HERE.parent / "skinned-converter"
 PINNED = {
     "fx_models.json": "93cefe10ffb8d7fa55f61a6eebdcdae07f08498ca711ca1f8b50718a66f934ba",
     "fx_particles.py": "c279e4bdece4635dd31335dd49d5ed8906a83b66f9f6fe12346046a2c3f56950",
-    "fx_convert.py": "b074bc1dba8cf509d8e31b33f87249f2b90bd5ea3ddeb12aac3b4d12fe5be2d7",
+    "fx_convert.py": "eebf0707c9eb58c5ef8cef13b8ff1df00fcd2c48aabd588aa139592c7f17e786",
     "../skinned-converter/m2ir.py": "6aff8e742506277fa245a61cf1f6ff17bd7624277efe68cd2e654d40ed3cdbb3",
-    "../skinned-converter/skinned_convert.py": "665571215345c4454dd079fb17b63be18684d03a4c00f27095d7648ff956c3ac",
+    "../skinned-converter/skinned_convert.py": "7f6c42deae5986b1a91010a3836d105e81fa62aaf62462cad16ce5ce20d2128f",
 }
 BS = chr(92)
 ALIAS = "Spells/AzerothSurvivorsHD/R/"

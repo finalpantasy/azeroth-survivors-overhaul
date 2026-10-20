@@ -31,7 +31,7 @@ def decode_blp(mpq: Path, internal: str, png: Path):
     return np.array(Image.open(png).convert("RGBA")), (r.stdout.strip() or "decoded")
 
 
-def check(out: Path, model_bytes: bytes | None = None, label="converted", skin_choice=0):
+def check(out: Path, model_bytes: bytes | None = None, label="converted", skin_choice=0, size=260):
     rep = json.loads((out / "conversion-report.json").read_text(encoding="utf8"))
     internal = rep["output"]["model_path"]
     mpq = out / rep["output"]["mpq"]
@@ -79,7 +79,7 @@ def check(out: Path, model_bytes: bytes | None = None, label="converted", skin_c
             d = m.sequences[si]["duration"]
             frames.append((f"{NAMES.get(aid, aid)} {aid}", si, d * (0.95 if aid == 1 else 0.45)))
     sheet = out / f"preview-{label}.png"
-    stats = R.contact_sheet(m, frames, btex, sheet, size=260)
+    stats = R.contact_sheet(m, frames, btex, sheet, size=size)
     res = {"model_path": internal, "decoded_textures": decoded, "bind_radius": round(rad, 3),
            "bind_box": [bind.min(0).round(3).tolist(), bind.max(0).round(3).tolist()],
            "worst_excursion_ratio": max(e["max_radius_ratio"] for e in excursion) if excursion else 0,
@@ -92,8 +92,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("out", type=Path)
     ap.add_argument("--skin", type=int, default=0)
+    ap.add_argument("--size", type=int, default=260)
     a = ap.parse_args()
-    r = check(a.out, skin_choice=a.skin)
+    r = check(a.out, skin_choice=a.skin, size=a.size)
     print(json.dumps({k: r[k] for k in ("decoded_textures", "bind_box", "worst_excursion_ratio", "sheet")}, indent=1))
 
 

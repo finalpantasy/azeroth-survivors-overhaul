@@ -23,9 +23,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PINNED = {
-    "decimate.py": "2669522a5131a540ffb9b43894c922cad00f3b765dd42267a36f8f6adcc55e1f",
+    "decimate.py": "1e72b18ef51ecbf4ae6737035b71f5d2b6b823a08f2d51b992fdd01e665b044c",
     "m2ir.py": "6aff8e742506277fa245a61cf1f6ff17bd7624277efe68cd2e654d40ed3cdbb3",
-    "skinned_convert.py": "665571215345c4454dd079fb17b63be18684d03a4c00f27095d7648ff956c3ac",
+    "skinned_convert.py": "7f6c42deae5986b1a91010a3836d105e81fa62aaf62462cad16ce5ce20d2128f",
     "recipes/bloodelfmale.json": "ec9f4ecfc71b1899da28d93006aa77e43c2bd0b19280040aaf170d284fa65b28",
     "recipes/golemharvest.json": "df246e2a288f564e345942f990cbc0c79227f397ac059ac4e7bf695bc22b12d9",
     "recipes/gnoll.json": "fae212d691232099a7286281d5ae223669c97c7cdb5013551326c6d3c2b24938",

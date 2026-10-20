@@ -210,8 +210,13 @@ def trim_bones(m: m2ir.Model):
     return {"bones_before": n, "bones_after": len(bones)}
 
 
-def rewrite_batches(m: m2ir.Model, env_mode: str):
-    """Native batches carry one texture each; split modern multi-texture batches (layer 0 + additive env layer)."""
+def rewrite_batches(m: m2ir.Model, env_mode: str, layers: dict | None = None):
+    """Native batches carry one texture each; split modern multi-texture batches (layer 0 + additive env layer).
+    layers (recipe "batch_layers"): {section index: {"layer": k, "uv": 0|1}} draws that section's batch with texture
+    layer k sampled with UV set 0 or 1 instead of layer 0 / UV 0 (modern combiners that shape a tint with a second
+    texture on the second UV set, e.g. voidwalker2's smoke cards)."""
+    layers = {int(k): v for k, v in (layers or {}).items()}
+    uv_unit = {}
     # Modern files leave textureCoordCombo lookup empty (UV set comes from the shader id); the native engine reads
     # texture_unit_lookup[texCoordCombo] and treats a value > 2 (or a missing entry) as a sphere env-map. Shipped
     # native layering (Murloc.m2): texture_unit_lookup [0, -1]; env layer = material (0x10, blend 4), layer + 1.
@@ -220,6 +225,16 @@ def rewrite_batches(m: m2ir.Model, env_mode: str):
     m.texture_unit_lookup = [0]
     for b in m.batches:
         fl, shader, sec, geo, color, mat, layer, tcount, tcombo, tcoord, tweight, ttrans = b
+        if sec in layers:
+            k, uvs = int(layers[sec].get("layer", 0)), int(layers[sec].get("uv", 0))
+            require(k < tcount, f"batch_layers: section {sec} has {tcount} texture layer(s), not {k + 1}")
+            if uvs not in uv_unit:
+                uv_unit[uvs] = 0 if uvs == 0 else len(m.texture_unit_lookup)
+                if uvs:
+                    m.texture_unit_lookup.append(uvs)
+            out.append((fl & 0xFF3F, 0, sec, geo, color, mat, layer, 1, tcombo + k, uv_unit[uvs], tweight, ttrans))
+            notes.append(f"batch sec {sec}: texture layer {k} on UV set {uvs} (recipe batch_layers); other layers dropped")
+            continue
         out.append((fl & 0xFF3F, 0, sec, geo, color, mat, layer, 1, tcombo, 0, tweight, ttrans))
         if tcount >= 2:
             if env_mode == "split" and tcombo + 1 < len(m.texture_lookup):
@@ -398,8 +413,9 @@ def convert(recipe: dict, cache: Path, out: Path, data_dir: Path | None, work: P
     if recipe.get("decimate"):
         dc = recipe["decimate"]
         report["decimate"] = decimate.decimate(m, int(dc["target_vertices"]), float(dc.get("weight_penalty", 0.002)),
-                                               float(dc.get("boundary_weight", 10.0)))
-    batch_notes = rewrite_batches(m, recipe.get("env_layers", "split"))
+                                               float(dc.get("boundary_weight", 10.0)), int(dc.get("min_component", 0)),
+                                               set(dc["sections"]) if "sections" in dc else None)
+    batch_notes = rewrite_batches(m, recipe.get("env_layers", "split"), recipe.get("batch_layers"))
     if recipe.get("trim_bones"):
         report["trim_bones"] = trim_bones(m)
     internal = recipe["native_model_path"].replace("/", "\\")

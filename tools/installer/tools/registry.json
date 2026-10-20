@@ -47,7 +47,7 @@
     },
     "skinned-converter": {
       "script": "skinned_step.py",
-      "sha256": "30e8e65723fe050594d3f8c4c8d52cc37d2fb26e3e47c258a7bafb70dd6c6c51",
+      "sha256": "8bcb35435f9a994809c0843fa9977a1b869f120d7d4e898320157646777c3cac",
       "search": [
         "tools",
         "../skinned-converter"
@@ -65,7 +65,7 @@
     },
     "spells-fx-converter": {
       "script": "spells_step.py",
-      "sha256": "65c613d4386e124eed1a4ead1abc5cd37d98a13dcd2496073b80345c167d8230",
+      "sha256": "dac2261ddff8374f2e1dbbcd660eb55b8426a948de959c4c819471a1db504da0",
       "search": [
         "tools",
         "../spells"

@@ -1,6 +1,6 @@
 {
   "name": "Infernal",
-  "note": "Infernal (CreatureModelData 24) -> creature/infernal2/infernal2_low.m2 LOD 2 (gray body, fel fire), decimated. Native displays only set variation 0, so the fx slots (types 12/13) are fixed.",
+  "note": "Infernal (CreatureModelData 24) -> creature/infernal2/infernal2_low.m2 LOD 2 (gray body, fel fire). Modern model is 3.9x native height, so scale 0.26. Decimation leaves the opaque rock body (section 1) exact and keeps every rock piece (min_component); stops at 3492 vertices (2.7x native) because more cost the arms. Native displays only set variation 0, so the fx slots (types 12/13) are fixed.",
   "source": {
     "profile": "forever",
     "model": 1472486,
@@ -25,9 +25,20 @@
   },
   "env_layers": "drop",
   "drop_unused_textures": true,
-  "scale": 1.0,
+  "scale": 0.26,
   "trim_bones": true,
   "decimate": {
-    "target_vertices": 2500
+    "target_vertices": 2560,
+    "min_component": 8,
+    "sections": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
   }
 }

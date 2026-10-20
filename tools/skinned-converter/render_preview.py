@@ -105,7 +105,22 @@ def skinned_positions(model, seq_index, t):
     return acc, nacc, uv
 
 
-def raster(model, pos, uv, textures, view, size, box, bg=(40, 44, 52)):
+def batch_alphas(model, seq_index, t):
+    """Per-batch opacity from the batch's color alpha and transparency tracks (the engine hides alpha-0 batches)."""
+    gs = model.global_sequences
+    out = []
+    for b in model.batches:
+        a = 1.0
+        if b[4] < len(model.colors):
+            a *= sample(model.colors[b[4]][1], seq_index, t, "<h", (32767,), gs)[0] / 32767
+        tl = model.transparency_lookup
+        if b[10] < len(tl) and 0 <= tl[b[10]] < len(model.transparency):
+            a *= sample(model.transparency[tl[b[10]]], seq_index, t, "<h", (32767,), gs)[0] / 32767
+        out.append(max(0.0, min(1.0, a)))
+    return out
+
+
+def raster(model, pos, uv, textures, view, size, box, bg=(40, 44, 52), alphas=None):
     """view: 'front' looks down -X (model faces +X), 'side' looks down +Y. textures: batch index -> RGBA ndarray or None."""
     W = H = size
     img = np.zeros((H, W, 3), np.float64)
@@ -128,6 +143,8 @@ def raster(model, pos, uv, textures, view, size, box, bg=(40, 44, 52)):
     # opaque / alpha-key first, then the blended layers in file order without depth writes
     order = [i for i in range(len(model.batches)) if blends[i] < 2] + [i for i in range(len(model.batches)) if blends[i] >= 2]
     for bi_ in order:
+        if alphas is not None and alphas[bi_] < 0.02:
+            continue
         b = model.batches[bi_]
         sec = model.sections[b[2]]
         tex = textures.get(bi_)
@@ -178,7 +195,7 @@ def raster(model, pos, uv, textures, view, size, box, bg=(40, 44, 52)):
                 sub[m] = zz[m]
                 reg[m] = rgb[m]
                 continue
-            al = col[..., 3:4] / 255.0
+            al = col[..., 3:4] / 255.0 * (alphas[bi_] if alphas is not None else 1.0)
             if blend == 2:  # alpha
                 reg[m] = (rgb * al + reg * (1 - al))[m]
             elif blend in (3, 4):  # additive (4: alpha-weighted)
@@ -193,8 +210,11 @@ def contact_sheet(model, frames, textures, out_path, size=300, title=""):
     posed = []
     for label, si, t in frames:
         p, _, uv = skinned_positions(model, si, t)
-        posed.append((label, p, uv))
-    allp = np.concatenate([p for _, p, _ in posed])
+        al = batch_alphas(model, si, t)
+        vis = sorted({model.lookup[j] for bi_, b in enumerate(model.batches) if al[bi_] >= 0.02
+                      for j in range(model.sections[b[2]]["vstart"], model.sections[b[2]]["vstart"] + model.sections[b[2]]["vcount"])})
+        posed.append((label, p, uv, al, vis))
+    allp = np.concatenate([p[vis] if vis else p for _, p, _, _, vis in posed])
     lim = np.percentile(np.abs(allp), 99.9)
     ext = max(float(np.abs(allp[:, :]).max()), 1e-3)
     box_f = ((-allp[:, 1].max(), -allp[:, 1].min()), (allp[:, 2].min(), allp[:, 2].max()))
@@ -202,9 +222,9 @@ def contact_sheet(model, frames, textures, out_path, size=300, title=""):
     cols = len(posed)
     sheet = Image.new("RGB", (cols * size, 2 * size + 18), (20, 20, 24))
     dr = ImageDraw.Draw(sheet)
-    for i, (label, p, uv) in enumerate(posed):
-        sheet.paste(raster(model, p, uv, textures, "front", size, box_f), (i * size, 18))
-        sheet.paste(raster(model, p, uv, textures, "side", size, box_s), (i * size, 18 + size))
+    for i, (label, p, uv, al, _) in enumerate(posed):
+        sheet.paste(raster(model, p, uv, textures, "front", size, box_f, alphas=al), (i * size, 18))
+        sheet.paste(raster(model, p, uv, textures, "side", size, box_s, alphas=al), (i * size, 18 + size))
         dr.text((i * size + 4, 3), label, fill=(230, 230, 230))
     sheet.save(out_path)
     return {"max_abs_coord": ext, "p99.9_abs": float(lim)}
